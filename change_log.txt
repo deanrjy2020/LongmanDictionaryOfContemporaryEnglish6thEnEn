@@ -1,0 +1,69 @@
+1. LLA above keyword heading fix. 'a number or amount that is approximately right' -> 'in a higher position than something' 6 times (above above over overhang overhead upstairs).
+2. LLA across keyword heading fix. 'someone who officially tries to prove that someone is guilty' -> 'across' 7 times (across over through trans- cut cross crossing).
+3. LLA ambitious keyword heading fix. 'remaining or continuing forever' -> 'determined to be successful in your life or job' 8 times (ambitious ambitiously ambitiousness ambition go-getter go-getting competitive competitively).
+4. LLA another keyword heading fix. 'to try to make someone less angry' -> 'one more of the same kind' 6 times (another one more extra spare additional).
+5. LLA appear keyword heading fix. 'any one of the people in a group or in the world' -> 'to start to be seen' 7 times (appear visible view emerge loom reappear reappearance).
+6. LLA because keyword heading fix. 'dressed, arranged, decorated etc in a beautiful way' -> 'what you say when you are giving the reason for something' 9 times (because 'due to' 'owing to' thanks result reason out account seeing).
+7. LLA between keyword heading fix. 'to do something better than before' -> 'between two or more people or things' (between among middle sandwich).
+8. LLA both keyword heading fix. 'money that is borrowed' -> 'what you say to talk about two people or things' 10 times (both two pair each 'one another' either neither neither mutual share).
+9. LLA but keyword heading fix. 'busy' -> 'but' 17 times (but, but, however, nevertheless, nonetheless, hand, still, all, same, yet, whereas, while, though, though, even, only, except).
+10. LLA cancel keyword heading fix. 'when you are not allowed or do not have the power to do something' -> 'to decide that a planned event will not now happen' 4 times (cancel call scrub shelve).
+11. LLA check keyword heading fix. 'someone who cheats' -> 'to make sure that something is true or correct' 12 times (check check sure sureness certain double-check verifiable verification verify confirm ascertain ascertainable).
+12. LLA competition keyword heading fix. 'someone who likes competing' -> 'competition' 4 times (competition championship tournament contest).
+13. LLA completely keyword heading fix. 'a complaint' -> 'completely and in every way' 17 times (completely, absolutely, fully, totally, entirely, wholly, utterly, positively, complete, completeness, total, absolute, utter, sense, through, whole-hearted, whole-heartedly).
+14. LLA dead keyword heading fix. 'darkness' -> 'no longer alive' 13 times (dead, dead, deadness, late, lateness, doornail, lifeless, lifelessly, lifelessness, deceased, posthumous, posthumously, pushing).
+15. LLA depend/it depends keyword heading fix. 'looking or smelling delicious' -> 'when what happens is influenced by other facts or events' 7 times (depend, according to, determined, dictate, hinge, hinged, decided).
+16. LLA doubt keyword heading fix. 'not caring about something' -> 'when you think something is unlikely to happen or be true' 13 times (think, doubt, doubt, doubter, doubtful, doubtfully, dubious, dubiously, dubiousness, surprised, thought, sure, sureness).
+17. LLA each other keyword heading fix. 'happening during the time that something else happens' -> 'ways of saying that two or more people do something to each other' 9 times (each, one another, exchange, exchangeable, mutual, reciprocal, reciprocally, two-way, trade).
+18. LLA equipment keyword heading fix. 'not having equal rights' -> 'things you use for doing something' 6 times (equipment, tool, apparatus, gear, kit, stuff).
+19. LLA especially keyword heading fix. 'unable to escape' -> 'more than usual or more than others' 13 times (especially, particularly, specially, particular, particular, above, most, least, notably, people, more, anyone, special).
+20. LLA ever keyword heading fix. 'unable to escape' -> 'at any time in the past or future' 4 times (ever, time, history, life).
+21. LLA fairly/quite keyword heading fix. 'when a situation or decision is fair' -> 'more than a little, but not very' 7 times (fairly, quite, pretty, moderately, rather, somewhat, reasonably).
+22. LLA fed up keyword heading fix. 'someone who is liked more than other people' -> 'feeling tired, bored, or annoyed' 4 times (enough, pissed, tether, jaded).
+23. LLA finally keyword heading fix. 'types of film' -> 'when something happens after a long time' 10 times (finally, eventually, end, end, at, last, later, one, day, time).
+24. LLA flow keyword heading fix. 'with lots of hills or mountains' -> 'when liquid moves or comes out of something' 12 times (flow, flow, pour, run, leak, drip, ooze, gush, trickle, squirt, spurt, cascade).
+25. LLA in order to keyword heading fix. 'when a law court decides that someone is innocent' -> 'in order to get something, achieve something, or make something happen' 4 times (order, so, for, view).
+26. LLA insist keyword heading fix. 'when a law court decides that someone is innocent' -> 'to say firmly that someone must do something or that something must happen' 10 times (insist, demand, foot, adamant, adamantly, won't, answer, insistent, insistently, insistence).
+27. LLA instructions keyword heading fix. 'using instinct rather than knowledge' -> 'information about how to do something or about what to do' 7 times (instruction, brief, recipe, manual, guide, handbook, cookbook).
+28. LLA kick keyword heading fix. 'when you are forced to stay somewhere' -> 'kick' 4 times (kick, kick, knee, boot).
+29. LLA maybe keyword heading fix. 'material for making clothes, curtains etc' -> 'when you think something may happen or may be true, but you are not sure' 14 times (maybe, perhaps, may, might, could, possible, chance, possibly, conceivable, conceivably, you, never, know, who).
+30. LLA never keyword heading fix. 'to make someone feel nervous' -> 'never' 8 times (never, ever, million, millionth, millionth, moment, time, known).
+31. LLA no matter what/how much etc keyword heading fix. 'to shake your head as a way of saying no' -> 'no matter what/how much etc' 13 times (no, no, matter, however, whatever, whichever, whoever, regardless, irrespective, never, mind, come, may).
+32. LLA once keyword heading fix. 'old-fashioned in a pleasant way' -> 'on one occasion in the past' 7 times (once, one, time, occasion, stage, point, day).
+33. LLA partly keyword heading fix. 'to be a part of something' -> 'not completely' 9 times (partly, partially, half, completely, entirely, extent, point, degree, part).
+34. LLA pass/go past keyword heading fix. 'the people at a party' -> 'to go past a place, person, or thing' 4 times (by, pass, pass, overtake).
+35. LLA pattern keyword heading fix. 'on one occasion in the past' -> 'pattern' 5 time (pattern, design, marking, motif, patterning).
+36. LLA point at keyword heading fix. 'a person or group of people you play against' -> 'to point at someone or something, to show which one you mean' 4 times (point, indicate, gesture, towards).
+37. LLA pour keyword heading fix. 'to make something possible' -> 'to make liquid or a substance come out of a container' 6 times (pour, spill, empty, sprinkle, tip, drizzle).
+38. LLA public services keyword heading fix. 'when a lot of people can see you or know about what is happening' -> 'things that are provided for people to use' 4 times (service, amenity, utility, supply).
+39. LLA realize keyword heading fix. 'when pictures, films etc do not make things seem real' -> 'to notice or understand something that you did not notice or understand before' 10 times (realize, occur, sink, dawn, strike, hit, wake, fact, click, home).
+40. LLA rubbish/garbage keyword heading fix. 'to move over a surface while pressing against it' -> 'things that you throw away because you do not want them' 7 times (rubbish, garbage, trash, waste paper, litter, refuse, waste).
+41. LLA rumour keyword heading fix. 'rules of acceptable behaviour' -> 'things that people say, which may or may not be true' 10 times (rumour, speculation, gossip, scandal, report, talk, hearsay, hear, grapevine, rumoured).
+42. LLA since keyword heading fix. 'not having a lot of decoration or things added' -> 'since a particular time or event in the past' 5 times (since, ever, for, from, start).
+43. LLA so/therefore keyword heading fix. 'what you say to tell someone that you are sorry' -> 'ways of saying what the result of something is' 7 times (so, so, therefore, such, result, consequently, then).
+44. LLA special keyword heading fix. 'not able to speak' -> 'special' 6 times (special, special, specially, particular, unique, uniqueness).
+45. LLA speed keyword heading fix. 'not able to speak' -> 'how fast something moves or is done' 7 times (speed, speed, rate, pace, velocity, momentum, per).
+46. LLA system keyword heading fix. 'to try to make someone feel sorry for you' -> 'a system' 6 times (system, set-up, network, framework, structure, mechanism).
+47. LLA thirsty keyword heading fix. 'what you say when you think something is true, but you are not sure' -> 'feeling that you want to drink something' 10 times (thirsty, thirstily, drink, dry, dryness, parched, dehydrate, dehydrated, dehydration, thirst).
+48. LLA tool keyword heading fix. 'to use the toilet' -> 'a tool' 6 times (tool, instrument, gadget, device, implement, utensil).
+49. LLA until keyword heading fix. 'when things are spread around in a messy way' -> 'continuing to a particular time or event and then stopping' 3 times (until, up, from).
+50. LLA working keyword heading fix. 'to not work hard enough' -> 'when a machine/system etc works properly' 8 times (work, working, order, go, up, run, operational, operationally).
+51. LLA section addition. Add 'a fairly long time' section 3 times (time, time, while_noun).
+52. LLA section addition. Add 'to be getting nearer to a person or vehicle in front of you' section 3 times (near, near, near).
+53. LLA section addition. Add 'to be almost a particular age' section 2 times (age, age).
+54. LLA section addition. Add 'when something is intended to do something' section 1 time (intend).
+55. LLA section addition. Add 'ways of beginning a letter' section 5 times (letter, dear_adj, sir, madam, hi).
+56. LLA section addition. Add 'to make people notice you' section 2 times (notice, notice).
+57. LLA section addition. Add 'to start talking about a subject' section 2 times (subject, subject).
+58. LLA section addition. Add 'to keep saying the same thing in an annoying way' section 2 times (repeat, repeat).
+59. LLA section addition. Add 'what you call your mother' section 1 time (mother).
+60. LLA section addition. Add 'for people of one sex' section 1 time (sex).
+61. LLA no keyword heading fix. 'no matter what/how much etc' -> 'to shake your head as a way of saying no' 2 times (no, no).
+62. LLA 'not young' section fix. 'The bar was fill with ageing hippies' -> 'The bar was filled with ageing hippies' 7 times (ancient, elderly, middle-aged, old, wizened, wrinkled, young).
+63. LDOCE6 main body fix. 'see thesaurus at approximate' -> 'see thesaurus at approximately' 4 times (about, around, circa, roughly).
+64. LDOCE6 main body fix. 'They first met at/in/fifteen years ago' -> 'They first met at/in/on fifteen years ago' 1 time (ago).
+65. LDOCE6 main body fix. 'ɪˈtɪmədeɪtɪŋ' -> 'ɪnˈtɪmədeɪtɪŋ' 1 time (intimidating).
+66. LDOCE6 headword special char fix. e.g. 'é' -> 'e', only changed in the headword, not the entry body.
+67. LDOCE6 quotation mark fix. (“->") (”->") (""->") (''->") (‘->') (’->').
+68. LDOCE6 entry deletion. Delete 'down‧state', 're‧cap' and 're‧sit' entry.
+69. ')

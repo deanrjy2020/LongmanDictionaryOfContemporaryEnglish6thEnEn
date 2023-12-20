@@ -1,0 +1,21 @@
+<details>
+<summary>Change log</summary>
+
+content here
+</details>
+
+
+1,
+' how tall someone is'这个LLA heading在整个词典里面出现了次4, 在height stature tall tallness 
+解决方法, 在txt里面搜索'<span class="secheading"> how tall someone is</span>' 有4个match, 将how前面的一个空格去掉.
+
+同理' when two things are so close that they touch each other', 2, touch touch 
+搜索'<span class="secheading"> when two things are so close that they touch each other</span>', 去掉when前面的空格
+
+这个是小问题, 是在比对所有headings的时候发现的, 顺手去掉空格
+
+2,
+to to 一类的重复问题, 96L
+
+3, 
+见readme
