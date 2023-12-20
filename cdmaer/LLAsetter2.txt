@@ -1,0 +1,25 @@
+to take money or a gift that someone offers you@take/accept|@LLA-ACCEPT-2@2@Mark gave us a lot of helpful advice, but he refused to take any payment for it.
+to accept something as payment@take/accept|@LLA-ACCEPT-8@2@Will you take a cheque?
+to join the army, navy etc@join|join up|enlist|@LLA-ARMY-4@2@He wants to join the air force when he finishes school.
+to ask someone questions for a newspaper, TV programme etc@interview|interview|@LLA-ASK-5@2@At the end of the race the winner was interviewed by NBC news.
+to ask someone questions to decide whether to offer them a job etc@interview|interview|@LLA-ASK-6@2@I'll be interviewing two candidates today and three others tomorrow.
+to believe that something is caused by a particular thing@put something down to|attribute something to|@LLA-CAUSE-9@2@Charlie's been drinking a lot lately, which I put down to stress at work.
+easy to change@flexible|adaptable|@LLA-CHANGE/NOT CHANGE-11@2@We need a flexible management system, able to meet the changing needs of our customers.
+willing to change the way you do something@flexible|adaptable|@LLA-CHANGE/NOT CHANGE-27@2@If you're looking for a job you need to be flexible about where you're prepared to work.
+to change over a period of time and become bigger, stronger etc@develop|evolve|@LLA-DEVELOP-1@2@In some patients, the disease develops very slowly.
+to develop a new plan, idea, method@develop|evolve|@LLA-DEVELOP-4@2@The department is developing a strategy to fight unemployment.
+someone who hates you and wants to harm you@enemy|@LLA-ENEMY-2@3@Did your husband have any enemies?
+the part of something that is nearest to you or furthest away from the back@the front|@LLA-FRONT-1@3@She was wearing a T-shirt with a picture of an elephant on the front.
+the part of a space, room, vehicle etc that is furthest forward@the front|@LLA-FRONT-2@3@Let's get to the concert early so we can sit near the front.
+the position at the front of a crowd or line of people, cars etc@the front|@LLA-FRONT-3@3@I stood in the line for two hours before I got to the front.
+someone who hates you and wants to harm you@enemy|@LLA-HATE-5@3@The detective wanted to know whether the dead man had had any enemies.
+to turn or push a button to increase something@turn up|@LLA-INCREASE-9@2@Hey, turn this up for a second, I like this song.
+to join a military force@join|join up|enlist|@LLA-JOIN-8@2@He joined the navy when he was 16.
+to make music, a radio, or a television louder@turn up|@LLA-LOUD-5@2@Can you turn the television up? I can't hear it.
+a person in a story@character|hero|heroine|@LLA-PERSON/PEOPLE-4@2@It was a wonderful story -- the characters were so convincing.
+to think that something happens because of something else@put something down to|attribute something to|@LLA-RESULT-5@2@When Charlie became ill, I was inclined to put it down to the pressures of his job.
+one of two sides of something thin and flat@side|@LLA-SIDE-3@3@Instructions on how to get there are on the other side.
+not the front, back, top, or bottom@side|@LLA-SIDE-4@3@One of its sides was covered with intricate patterns.
+the left or right half of an object, area, or road@side|@LLA-SIDE-5@3@OK, let's have all the girls on this side and all the boys on that side.
+someone in a story@character|hero|heroine|@LLA-STORY-3@2@The two main characters in the book are a young boy and his teacher.
+the people you are fighting against in a war@enemy|@LLA-WAR-6@3@Even though these soldiers were our enemies, I felt desperately sorry for them.
