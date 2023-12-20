@@ -1,0 +1,78 @@
+list1 alert: 	accusation	noun	to say that you think someone has done something bad	to say that you think someone has done something bad 
+list1 alert: 	accuse	verb	to say that you think someone has done something bad	to say that you think someone has done something bad 
+list1 alert: 	accuse	verb	to say that you think someone has done something bad	to say that you think someone has done something bad 
+list1 alert: 	accusing	adjective	to say that you think someone has done something bad	to say that you think someone has done something bad 
+list1 alert: 	accusing	adjective	to say that you think someone has done something bad	to say that you think someone has done something bad 
+list1 alert: 	against	preposition	to have a disadvantage compared to other people or things	to have a disadvantage compared to other people or things 
+list1 alert: 	allegation	noun	to say that you think someone has done something bad	to say that you think someone has done something bad 
+list1 alert: 	allege	verb	to say that you think someone has done something bad	to say that you think someone has done something bad 
+list1 alert: 	amount	noun	an amount that is carried in something	an amount that is carried in something 
+list1 alert: 	amount	verb	an amount that is carried in something	an amount that is carried in something 
+list1 alert: 	brave	adjective	not afraid when you are in a dangerous or frightening situation	not afraid when you are in a dangerous or frightening situation 
+list1 alert: 	brave	adjective	not afraid when you are in a dangerous or frightening situation	not afraid when you are in a dangerous or frightening situation 
+list1 alert: 	carve	verb	to cut food	to cut food 
+list1 alert: 	catch	verb	to catch someone doing something wrong	to catch someone doing something wrong 
+list1 alert: 	catch	noun	to catch someone doing something wrong	to catch someone doing something wrong 
+list1 alert: 	chop	verb	to cut food	to cut food 
+list1 alert: 	confront	verb	to say that you think someone has done something bad	to say that you think someone has done something bad 
+list1 alert: 	count	verb	to have a disadvantage compared to other people or things	to have a disadvantage compared to other people or things 
+list1 alert: 	courageous	adjective	not afraid when you are in a dangerous or frightening situation	not afraid when you are in a dangerous or frightening situation 
+list1 alert: 	courageous	adjective	not afraid when you are in a dangerous or frightening situation	not afraid when you are in a dangerous or frightening situation 
+list1 alert: 	cut	verb	to cut food	to cut food 
+list1 alert: 	cut	noun	to cut food	to cut food 
+list1 alert: 	dapper	adjective	wearing good clothes and looking tidy	wearing good clothes and looking tidy 
+list1 alert: 	dice	verb	to cut food	to cut food 
+list1 alert: 	disadvantage	noun	to have a disadvantage compared to other people or things	to have a disadvantage compared to other people or things 
+list1 alert: 	disadvantaged	adjective	to have a disadvantage compared to other people or things	to have a disadvantage compared to other people or things 
+list1 alert: 	docent	noun	a person whose job is to take people somewhere, show them things etc	a person whose job is to take people somewhere, show them things etc 
+list1 alert: 	fall	verb	to deliberately make someone fall	to deliberately make someone fall 
+list1 alert: 	fall	noun	to deliberately make someone fall	to deliberately make someone fall 
+list1 alert: 	finger	noun	to say that you think someone has done something bad	to say that you think someone has done something bad 
+list1 alert: 	grate	verb	to cut food	to cut food 
+list1 alert: 	guide	noun	a person whose job is to take people somewhere, show them things etc	a person whose job is to take people somewhere, show them things etc 
+list1 alert: 	handicapped	adjective	to have a disadvantage compared to other people or things	to have a disadvantage compared to other people or things 
+list1 alert: 	height	noun	how tall someone is	 how tall someone is
+list1 alert: 	hero	noun	not afraid when you are in a dangerous or frightening situation	not afraid when you are in a dangerous or frightening situation 
+list1 alert: 	heroic	adjective	not afraid when you are in a dangerous or frightening situation	not afraid when you are in a dangerous or frightening situation 
+list1 alert: 	heroic	adjective	not afraid when you are in a dangerous or frightening situation	not afraid when you are in a dangerous or frightening situation 
+list1 alert: 	heroine	noun	not afraid when you are in a dangerous or frightening situation	not afraid when you are in a dangerous or frightening situation 
+list1 alert: 	knock	verb	to deliberately make someone fall	to deliberately make someone fall 
+list1 alert: 	load	noun	an amount that is carried in something	an amount that is carried in something 
+list1 alert: 	mince	verb	to cut food	to cut food 
+list1 alert: 	neat	adjective	wearing good clothes and looking tidy	wearing good clothes and looking tidy 
+list1 alert: 	neat	adjective	wearing good clothes and looking tidy	wearing good clothes and looking tidy 
+list1 alert: 	neat	adjective	wearing good clothes and looking tidy	wearing good clothes and looking tidy 
+list1 alert: 	no	adverb	to shake your head as a way of saying no	no matter what/how much etc
+list1 alert: 	no	determiner	to shake your head as a way of saying no	no matter what/how much etc
+list1 alert: 	odds	noun	to have a disadvantage compared to other people or things	to have a disadvantage compared to other people or things 
+list1 alert: 	patronize	verb	to talk to someone as if they were stupid	to talk to someone as if they were stupid 
+list1 alert: 	point	verb	to say that you think someone has done something bad	to say that you think someone has done something bad 
+list1 alert: 	presentable	adjective	wearing good clothes and looking tidy	wearing good clothes and looking tidy 
+list1 alert: 	presentable	adjective	wearing good clothes and looking tidy	wearing good clothes and looking tidy 
+list1 alert: 	push	verb	to deliberately make someone fall	to deliberately make someone fall 
+list1 alert: 	red-handed	adjective	to catch someone doing something wrong	to catch someone doing something wrong 
+list1 alert: 	sharp	adjective	wearing good clothes and looking tidy	wearing good clothes and looking tidy 
+list1 alert: 	sharp	adjective	wearing good clothes and looking tidy	wearing good clothes and looking tidy 
+list1 alert: 	shred	verb	to cut food	to cut food 
+list1 alert: 	slice	verb	to cut food	to cut food 
+list1 alert: 	smart	adjective	wearing good clothes and looking tidy	wearing good clothes and looking tidy 
+list1 alert: 	smart	adjective	wearing good clothes and looking tidy	wearing good clothes and looking tidy 
+list1 alert: 	smart	adjective	wearing good clothes and looking tidy	wearing good clothes and looking tidy 
+list1 alert: 	snazzy	adjective	wearing good clothes and looking tidy	wearing good clothes and looking tidy 
+list1 alert: 	snazzy	adjective	wearing good clothes and looking tidy	wearing good clothes and looking tidy 
+list1 alert: 	snazzy	adjective	wearing good clothes and looking tidy	wearing good clothes and looking tidy 
+list1 alert: 	stacked	adjective	to have a disadvantage compared to other people or things	to have a disadvantage compared to other people or things 
+list1 alert: 	stature	noun	how tall someone is	 how tall someone is
+list1 alert: 	take	verb	a person whose job is to take people somewhere, show them things etc	a person whose job is to take people somewhere, show them things etc 
+list1 alert: 	talk	verb	to talk to someone as if they were stupid	to talk to someone as if they were stupid 
+list1 alert: 	talk	noun	to talk to someone as if they were stupid	to talk to someone as if they were stupid 
+list1 alert: 	tall	adjective	how tall someone is	 how tall someone is
+list1 alert: 	tall	adjective	how tall someone is	 how tall someone is
+list1 alert: 	till	noun	to catch someone doing something wrong	to catch someone doing something wrong 
+list1 alert: 	touch	verb	when two things are so close that they touch each other	 when two things are so close that they touch each other
+list1 alert: 	touch	noun	when two things are so close that they touch each other	 when two things are so close that they touch each other
+list1 alert: 	trip	verb	to deliberately make someone fall	to deliberately make someone fall 
+list1 alert: 	usher	noun	a person whose job is to take people somewhere, show them things etc	a person whose job is to take people somewhere, show them things etc 
+list1 alert: 	well-dressed	adjective	wearing good clothes and looking tidy	wearing good clothes and looking tidy 
+list1 alert: 	well-groomed	adjective	wearing good clothes and looking tidy	wearing good clothes and looking tidy 
+list1 alert: 	well-turned-out	adjective	wearing good clothes and looking tidy	wearing good clothes and looking tidy 
