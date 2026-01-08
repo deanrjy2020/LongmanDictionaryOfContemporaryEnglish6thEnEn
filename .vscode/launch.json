@@ -8,7 +8,7 @@
             "name": "Python Debugger",
             "type": "debugpy",
             "request": "launch",
-            "program": "src/generate_stardict_lla.py",
+            "program": "src/generate_ldoce6enen_lla_2.py",
             //"console": "integratedTerminal"
             "cwd": "${workspaceFolder}",
         }

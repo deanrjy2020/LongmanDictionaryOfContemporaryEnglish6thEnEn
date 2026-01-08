@@ -11,12 +11,14 @@ from bs4 import BeautifulSoup, Tag
 from copy import copy
 from collections import Counter
 
+# 自己的全局变量/函数
+import utils
+
 '''
 
 mdx: https://forum.freemdict.com/t/topic/42061
 
 用soup解析html格式. 得到里面LLA信息
-弄到一半...
 
 run: PYTHONUTF8=1 python src/generate_lla_plus.py |& tee lla_plus_log.txt
 
@@ -24,16 +26,13 @@ run: PYTHONUTF8=1 python src/generate_lla_plus.py |& tee lla_plus_log.txt
 @@([A-Z0-9]+)@@
 \n@@\1@@
 
-book order
-BC里面去掉不重要的, 947 diff
+result里面的lla_sections_oneline.txt是用来生成tts的
+用上面的替换后, =result/lla_sections.txt
 
-两边都换行
-比较, 得到2097 diff
-
-改plus这边去match,
-
-76 diff
+lla_sections.txt 和lla_plus_sections.txt是用来比较用的
 '''
+
+debug = 0
 
 #不要加\n, 用上面的regex在文本里面替换加上\n
 NEW_LINE = "" 
@@ -42,39 +41,34 @@ section_map = {}
 section_keys_lla_book_order = []
 total_sec_cnt = 0 # adding all the cnt in the sec_to_cnt.
 total_phrase_num_in_identical_sections = 0
+total_runon_phrase_cnt = 0
 
 def hash_text(s):
     return hashlib.sha256(s.encode("utf8")).hexdigest()
 
 def register_section(secheading, all_phrase, sec_value, phrase_cnt, test_name):
-    # 里面有全大写的, 影响排序
+    # 处理heading
     if 'to ask someone questions for a newspaper' in secheading or \
         'when you believe or do not believe that' in secheading or \
         'the Internet and places on the Internet' in secheading or \
         'things you do on the Internet' in secheading:
+        # 这几个不用变小写:
         # 'to ask someone questions for a newspaper, TV programme etc' 里面的TV不改.
         # 'when you believe or do not believe that God'
         # 'the Internet and places on the Internet'
         # 'things you do on the Internet'
         None
     else:
+        # 里面有全大写的, 影响排序, 变小写
         secheading = secheading.lower()
-    # 两个或以上空格 → 一个空格
-    secheading = re.sub(r'\s{2,}', ' ', secheading)
-    # 和ldoce6一样
-    secheading = secheading.replace(" / ", "/")
 
-    # 两个或以上空格 → 一个空格
-    all_phrase = re.sub(r'\s{2,}', ' ', all_phrase)    
-    all_phrase = all_phrase.replace(" / ", "/")
+    # lla plus 的格式问题, 导致'/Hey'没有被捕获到, 这里加上.
+    # if 'ways of beginning a letter' == secheading:
+    #     all_phrase += '/Hey'
 
-    # 处理 content问题
-    # 两个或以上空格 → 一个空格
-    sec_value = re.sub(r'\s{2,}', ' ', sec_value)
-    # 和ldoce6一样
-    sec_value = sec_value.replace(" / ", "/")
-    #sec_value = sec_value.replace("’", "'")
-
+    # phrase里面少了一个空格, 影响key, 其他地方也有, 但是不管了. plus mdx里面有大量这样的情况
+    # if 'to do a test on something in order to check it or find out about it' == secheading:
+    #     all_phrase = all_phrase.replace("anexperiment", "an experiment")
 
     global total_sec_cnt
     global total_phrase_num_in_identical_sections
@@ -138,8 +132,18 @@ def get_en_text(obj) -> str:
     for zh in copy_obj.find_all("zh_cn"):
         zh.decompose()
     
-    text = copy_obj.get_text(strip=True)
+    text = copy_obj.get_text(" ", strip=True)
     assert_no_chinese(text)
+
+    # 在程序里修方便, 直接改lla plus mdx txt麻烦 (除非没办法)
+    # 修正lla plus mdx里面一些小bug, 和L6匹配.
+    # text = text.replace("’", "'")
+    # text = text.replace("‘", "'")
+    # # 两个或以上空格 → 一个空格
+    # text = re.sub(r'\s{2,}', ' ', text)
+    # /两边不要空格, 和ldoce6一样
+    text = text.replace(" / ", "/")
+
 
     return text
 
@@ -168,10 +172,11 @@ def parse_section(section):
     for secnr in secdef.find_all("span", class_="SECNR"):
         secnr.decompose()
     # 取剩余文本
-    secheading = secdef.get_text(strip=True)
+    #secheading = secdef.get_text(strip=True)
+    secheading = get_en_text(secdef)
     assert_no_chinese(secheading)
     assert secheading[0].isalpha(), f"test_name={test_name}, text={secheading}"
-    print(f"secheading={secheading}")
+    if debug: print(f"secheading={secheading}")
     
     one_sec_all_phrase = ""
     one_sec_all_phrase_cnt = 0
@@ -190,9 +195,10 @@ def parse_section(section):
         
         global total_phrase_num
         total_phrase_num += 1
-        print(f"total_phrase_num={total_phrase_num}")
+        if debug: print(f"total_phrase_num={total_phrase_num}")
         example_idx = 0
         subphrase_idx_in_phrase = 0
+        propform_idx_in_runon = 0
 
         # Exponent对应section里面的一个phrase 块
         assert kid.get("class") == ["Exponent"], \
@@ -209,18 +215,21 @@ def parse_section(section):
                 # for zh in copy_exp.find_all("zh_cn"):
                 #     zh.decompose()
                 
-                phrase = phrase_block_child.get_text(strip=True)
-                assert_no_chinese(phrase)
+                # phrase = phrase_block_child.get_text(strip=True)
+                # assert_no_chinese(phrase)
+                phrase = get_en_text(phrase_block_child)
 
                 # one_sec_all_phrase_cnt 就是phrase idx in cur section
                 tmp = f"{NEW_LINE}@@PHRASE{one_sec_all_phrase_cnt}@@{phrase}"
-                print(tmp)
+                if debug: print(tmp)
                 seccontent += tmp
 
                 one_sec_all_phrase += tmp
                 one_sec_all_phrase_cnt += 1
 
+                # phrase 有自己的example
                 example_idx = 0
+                # phrase 有自己的subphrase
                 subphrase_idx_in_phrase = 0
 
             elif phrase_block_child.get("class") == ["PRON"]:
@@ -236,7 +245,7 @@ def parse_section(section):
                 define = get_en_text(phrase_block_child)
 
                 tmp = f"{NEW_LINE}@@DEFINE@@{define}"
-                print(tmp)
+                if debug: print(tmp)
                 seccontent += tmp
 
                 example_idx = 0
@@ -255,19 +264,40 @@ def parse_section(section):
                             continue
 
                         tmp = f"{NEW_LINE}@@EXAMPLE{example_idx}@@{example}"
-                        print(tmp)
+                        if debug: print(tmp)
                         seccontent += tmp
 
                         example_idx += 1
                         
-                    elif example_child.get("class") == ["PROPFORM"]:
+                    elif example_child.get("class") == ["PROPFORM"]:                            
                         THESPROPFORM = get_en_text(example_child)
-                        #THESPROPFORM = example_child.get_text(strip=True)
 
+                        # 'but also' 是个特例, 不用替换
+                        if 'but also' not in THESPROPFORM and ' also ' in THESPROPFORM:
+                            # case 1, 
+                            # @@EXAS_THESPROPFORM2@@take a course/class also do a course
+                            # @@EXAS_THESPROPFORM0@@completely by accident also quite by accident
+                            THESPROPFORM = THESPROPFORM.replace(' also ', '@@VARIANT@@')
+                        elif 'British' in THESPROPFORM and ' American' in THESPROPFORM:
+                            # case 2, 
+                            # @@EXAS_THESPROPFORM0@@young offender British /juvenile offender American
+                            # @@EXAS_THESPROPFORM@@holiday spot British vacation spot American
+                            #   把中间的British替换成@@VARIANT@@, 后面的American去掉
+                            THESPROPFORM = THESPROPFORM.replace(' British ', '@@VARIANT@@').replace(' American', '')
+                        elif 'British' in THESPROPFORM:
+                            # case 3,
+                            # @@EXAS_THESPROPFORM0@@be in a critical condition British /be in critical condition
+                            THESPROPFORM = THESPROPFORM.replace(' British ', '@@VARIANT@@')
+                        # 内容是 /开头的, 把 /去掉
+                        THESPROPFORM = THESPROPFORM.replace('@@VARIANT@@/', '@@VARIANT@@').replace('@@VARIANT@@ /', '@@VARIANT@@')
+     
                         tmp = f"{NEW_LINE}@@THESPROPFORM{subphrase_idx_in_phrase}@@{THESPROPFORM}"
-                        print(tmp)
+                        if debug: (tmp)
                         seccontent += tmp
 
+
+
+                        # thespropform 有自己的example
                         example_idx = 0
                         subphrase_idx_in_phrase += 1
 
@@ -283,7 +313,7 @@ def parse_section(section):
                         #gloss = example_child.get_text(strip=True)
 
                         tmp = f"{NEW_LINE}@@GLOSS@@{gloss}"
-                        print(tmp)
+                        if debug: print(tmp)
                         seccontent += tmp
 
                         example_idx = 0
@@ -292,11 +322,12 @@ def parse_section(section):
                         assert False, f"test_name={test_name}, class = {example_child.get("class")}"
             elif phrase_block_child.get("class") == ["Variant"]:
                 variant_children = phrase_block_child.find_all("span", recursive=False)
-                varitype = None
+                #varitype = None
                 for variant_child_idx, variant_child in enumerate(variant_children):
                     if variant_child.get("class") == ["VARITYPE"]:
-                        varitype = get_en_text(variant_child)
-
+                        #varitype = get_en_text(variant_child)
+                        # also 之类的, 不要
+                        None
                     elif variant_child.get("class") == ["GRAM"]:
                         None
                         #内容无用
@@ -304,13 +335,13 @@ def parse_section(section):
                         variant = get_en_text(variant_child)
                         #variant = variant_child.get_text(strip=True)
 
-                        if varitype:
-                            tmp = f"{NEW_LINE}@@VARIANT@@{varitype} {variant}"
-                            varitype = None
-                        else:
-                            tmp = f"{NEW_LINE}@@VARIANT@@{variant}"
+                        # # 把' American'结尾的去掉.
+                        # if variant.endswith(' American'):
+                        #     variant = variant.replace(' American', '')
+
+                        tmp = f"{NEW_LINE}@@VARIANT@@{variant}"
                         
-                        print(tmp)
+                        if debug: print(tmp)
                         seccontent += tmp
 
                         example_idx = 0
@@ -329,7 +360,7 @@ def parse_section(section):
                     assert False
                 
                 tmp = f"{NEW_LINE}@@GLOSS@@{gloss}"
-                print(tmp)
+                if debug: print(tmp)
                 seccontent += tmp
 
                 example_idx = 0
@@ -345,7 +376,7 @@ def parse_section(section):
                     #prop = propform_children[0].get_text(strip=True)
 
                 tmp = f"{NEW_LINE}@@THESPROPFORM{subphrase_idx_in_phrase}@@{prop}"
-                print(tmp)
+                if debug: print(tmp)
                 seccontent += tmp
 
                 example_idx = 0
@@ -353,68 +384,129 @@ def parse_section(section):
 
             elif phrase_block_child.get("class") == ["RunOn"]:
                 continue
-                # LDOCE6里面可能没有这个部分, todo
+                # LDOCE6里面没有这个部分, todo
                 runon_children = phrase_block_child.find_all("span", recursive=False)
                 for runon_child_idx, runon_child in enumerate(runon_children):
                     if runon_child.get("class") == ["SPELLING"]:
-                        spelling = get_en_text(runon_child)
+                        # 派生词 phrase
+                        runon_phrase = get_en_text(runon_child)
                         #spelling = runon_child.get_text(strip=True)
 
-                        tmp = f"{NEW_LINE}@@RUNONSPELL@@{spelling}"
-                        print(tmp)
+                        # 最后几个懒得看了, 简短粗暴
+                        if ' also ' in runon_phrase:
+                            runon_phrase = runon_phrase.replace(' also ', '@@RUNON_VARIANT@@')
+                        elif 'travelling British /traveling American' == runon_phrase:
+                            runon_phrase = 'travelling@@RUNON_LABEL@@British@@RUNON_PHRASE@@traveling@@RUNON_LABEL@@American'
+                        elif 'grovelling British /groveling American' == runon_phrase:
+                            runon_phrase = 'grovelling@@RUNON_LABEL@@British@@RUNON_PHRASE@@groveling@@RUNON_LABEL@@American'
+                        elif 'pimply American' == runon_phrase:
+                            runon_phrase = 'pimply@@RUNON_LABEL@@American'
+
+                        tmp = f"{NEW_LINE}@@RUNON_PHRASE@@{runon_phrase}"
+                        if debug: print(tmp)
                         seccontent += tmp
 
+                        global total_runon_phrase_cnt
+                        total_runon_phrase_cnt += 1
+                        # 有自己的example
                         example_idx = 0
+                        propform_idx_in_runon = 0
                         
                     elif runon_child.get("class") == ["RUNONDEF"]:
-                        runondef = get_en_text(runon_child)
+                        runon_define = get_en_text(runon_child)
                         #runondef = runon_child.get_text(strip=True)
 
-                        tmp = f"{NEW_LINE}@@RUNONDEF@@{runondef}"
-                        print(tmp)
+                        tmp = f"{NEW_LINE}@@RUNON_DEFINE@@{runon_define}"
+                        if debug: print(tmp)
                         seccontent += tmp
 
-                        example_idx = 0
+                        #example_idx = 0
 
                     elif runon_child.get("class") == ["Variant"]:
-                        Variant = get_en_text(runon_child)
-                        #Variant = runon_child.get_text(strip=True)
+                        
+                        variant_children = runon_child.find_all("span", recursive=False)
+                        #varitype = None
+                        for variant_child_idx, variant_child in enumerate(variant_children):
+                            if variant_child.get("class") == ["VARITYPE"]:
+                                varitype = get_en_text(variant_child)
+                                assert varitype == 'also', f"varitype={varitype}"
+                                tmp = f"{NEW_LINE}@@RUNON_VARITYPE@@{varitype}"
+                                if debug: print(tmp)
+                                seccontent += tmp
+                            elif variant_child.get("class") == ["VAR"]:
+                                variant = get_en_text(variant_child)
+                                #variant = variant_child.get_text(strip=True)
 
-                        tmp = f"{NEW_LINE}@@RUNONVARI@@{Variant}"
-                        print(tmp)
-                        seccontent += tmp
+                                # if varitype:
+                                #     tmp = f"{NEW_LINE}@@VARIANT@@{varitype} {variant}"
+                                #     varitype = None
+                                # else:
+                                #     tmp = f"{NEW_LINE}@@VARIANT@@{variant}"
+                                tmp = f"{NEW_LINE}@@RUNON_VARIANT@@{variant}"
+                                if debug: print(tmp)
+                                seccontent += tmp
+                            elif variant_child.get("class") == ["LABEL"]:
+                                label = get_en_text(variant_child)
+                                tmp = f"{NEW_LINE}@@RUNON_LABEL@@{label}"
+                                if debug: print(tmp)
+                                seccontent += tmp
 
-                        example_idx = 0
+                            else:
+                                assert False, f"class= {variant_child.get("class")}"
 
                     elif runon_child.get("class") == ["PRON"]:
-                        # 音标没用
-                        None
+                        # 音标, L6里面缺少, 也保存起来用于对比
+                        runon_pron = get_en_text(runon_child)
+                        
+                        tmp = f"{NEW_LINE}@@RUNON_PRON@@{runon_pron}"
+                        if debug: print(tmp)
+                        seccontent += tmp
+
                     elif runon_child.get("class") == ["PROPFORM"]:
-                        PROPFORM = get_en_text(runon_child)
+                        runon_propform = get_en_text(runon_child)
                         #PROPFORM = runon_child.get_text(strip=True)
 
-                        tmp = f"{NEW_LINE}@@RUNONPROPFORM@@{PROPFORM}"
-                        print(tmp)
+                        tmp = f"{NEW_LINE}@@RUNON_PROPFORM{propform_idx_in_runon}@@{runon_propform}"
+                        if debug: print(tmp)
                         seccontent += tmp
 
                         example_idx = 0
+                        propform_idx_in_runon += 1
 
                     elif runon_child.get("class") == ["GRAM"]:
-                        # 词性, 没用
-                        None
+                        # 词性, L6里面缺少, 也保存起来用于对比
+                        runon_gram = get_en_text(runon_child)
+                        
+                        tmp = f"{NEW_LINE}@@RUNON_GRAM@@{runon_gram}"
+                        if debug: print(tmp)
+                        seccontent += tmp
+
                     elif runon_child.get("class") == ["LABEL"]:
-                        # 没用
-                        None
+                        #  L6里面缺少, 也保存起来用于对比
+                        runon_label = get_en_text(runon_child)
+                        
+                        tmp = f"{NEW_LINE}@@RUNON_LABEL@@{runon_label}"
+                        if debug: print(tmp)
+                        seccontent += tmp
+
                     elif runon_child.get("class") == ["Exas"]:
                         exams_children = runon_child.find_all("span", recursive=False)
                         #assert len(exams_children) == 1, f"len(exams_children)={len(exams_children)}"
                         for exams_child_idx, exams_child in enumerate(exams_children):
                             if exams_child.get("class") == ["EXAMPLE"]:
                                 exa = get_en_text(exams_child)
-                                #exa = exams_child.get_text(strip=True)
+                                
+                                spans = exams_child.find_all("span", recursive=False)
+                                if len(spans) > 0:
+                                    assert len(spans) == 1
+                                    assert spans[0].get("class") == ["GLOSS"], f"spans[0].class={spans[0].get("class")}"
+                                    gloss = get_en_text(spans[0])
 
-                                tmp = f"{NEW_LINE}@@RUNON_EXAS_EXA{example_idx}@@{exa}"
-                                print(tmp)
+                                    assert gloss in exa, f"exa={exa}, gloss={gloss}"
+                                    exa = exa.replace(gloss, f"(={gloss})")
+
+                                tmp = f"{NEW_LINE}@@RUNON_EXAMPLE{example_idx}@@{exa}"
+                                if debug: print(tmp)
                                 seccontent += tmp
 
                                 example_idx += 1
@@ -424,7 +516,7 @@ def parse_section(section):
                                 #propform = exams_child.get_text(strip=True)
 
                                 tmp = f"{NEW_LINE}@@RUNON_EXAS_PROPFORM@@{propform}"
-                                print(tmp)
+                                if debug: print(tmp)
                                 seccontent += tmp
 
                                 example_idx = 0
@@ -434,17 +526,23 @@ def parse_section(section):
                                 #gloss = exams_child.get_text(strip=True)
 
                                 tmp = f"{NEW_LINE}@@RUNON_EXAS_GLOSS@@{gloss}"
-                                print(tmp)
+                                if debug: print(tmp)
                                 seccontent += tmp
 
-                                example_idx = 0
+                                #example_idx = 0
 
                             elif exams_child.get("class") == ["LABEL"]:
-                                # 没用
-                                None
+                                lb = get_en_text(exams_child)
+
+                                tmp = f"{NEW_LINE}@@RUNON_EXAS_LABEL@@{lb}"
+                                if debug: print(tmp)
+                                seccontent += tmp
+
                             else:
+                                # 全部处理完, 没有遗漏的
                                 assert False
                     else:
+                        # 全部处理完, 没有遗漏的
                         assert False, f"class = {runon_child.get("class")}"
                 
             elif phrase_block_child.get("class") == ["addtion"]:
@@ -475,7 +573,7 @@ def parse_activator(activ_span):
 
     global total_section_num
     total_section_num += 1
-    print(f"\ntotal_section_num={total_section_num}")
+    if debug: print(f"\ntotal_section_num={total_section_num}")
 
     parse_section(children[0])
 
@@ -484,14 +582,9 @@ def do_the_job():
     start_time = time.time()
     print("Parsing...")
 
-    # 两个独立的
-    debug = 0
-    log_info = 0
-    if debug:
-        # 初始数据
-        filename = 'data/bar.html'
-    else:
-        filename = 'data/LLA_plus.txt'
+    # 初始数据
+    #filename = 'data/bar.html'
+    filename = 'data/LLA_plus_L35.txt'
 
     '''
     py解析的是txt, 不会直接用mdx, double check一下txt对应的mdx的md5
@@ -502,29 +595,17 @@ def do_the_job():
     # verify the md5 of the input file.
     md5 = hashlib.md5(open(filename,'rb').read()).hexdigest()
     if not debug:
+        #assert md5 == '68406aca5bccd72b352ff18737c66483'
         '''
         todo, 手动改了:
-        ’ -> '
-        
-        ‘ -> '
-        
-        to ask someone questions for a newspaper, tv programme etc@@PHRASE0@@interview@@PHRASE1@@interview
-        -> 
-        to ask someone questions for a newspaper, TV programme etc@@PHRASE0@@interview@@PHRASE1@@interview
-
-        ways of beginning a letter@@PHRASE0@@Dear Sir/Sirs/Sir or Madam@@PHRASE1@@Dear Mr Wiggins/Ms Harper@@PHRASE2@@Dear Jim/Sarah etc@@PHRASE3@@Hi
-        -> Hi / Hey
-
-        'anexperiment' -> 'an experiment'
-
         add keyword的 2. to add more to an amount or cost 下面的add phrase的中文结构修正:
         <zh_cn>增加；添加<zh_cn>
+        <zh_cn>增加；添加<zh_cn><span class="Exas"><span class="EXAMPLE"> They seem to have added a 10% service charge
         ->
-        <zh_cn>增加；添加</zh_cn>
-
-        better then all others里面一个空的PROPFORM span删掉.
+        <zh_cn>增加；添加</zh_cn><span class="Exas"><span class="EXAMPLE"> They seem to have added a 10% service charge
         '''
-        #assert md5 == '68406aca5bccd72b352ff18737c66483'
+        #assert md5 == '9eaaa1b4d2d27a9ce5ae5c8a45fdaeae'
+        #不做了: better then all others里面一个空的PROPFORM span删掉.
         None
 
     POS_HEAD = 'POSITION_HEAD'
@@ -550,22 +631,12 @@ def do_the_job():
                 assert line.rstrip('\n') == '</>', f"test_name={test_name}"
                 test_name = 'init_invalid_name'
             # ======================================= do the modifications =======================================       
-            # debug 按字母跑, 而不是每次都从头开始
-            # c = test_name[0]
-            # if c not in {'e', 'E'}:
-            #     continue
+            # debug
+            if debug and 'above' != test_name:
+                continue
 
-            # 这个要删掉, bug.
-            # if test_name == '30 metres / 100 feet etc high' or \
-            #     test_name == '40 metres / 100 feet etc deep':
-            #     continue
-
-            # if the content doesn't have 'Longman Language Activator' string, skip
             if line_position != POS_BODY:
                 continue
-            # 特殊的单词, 忽略
-            # if line_position == POS_BODY and test_name == 'faq-about 33de5e2430c248afb78dd34e20f35466':
-            #     continue
 
             soup = BeautifulSoup(line, "lxml")
             
@@ -584,11 +655,15 @@ def do_the_job():
     # 单单保存heading到文件.
     with open("lla_plus_headings.txt", "w", encoding="utf-8") as f:
         for s in section_keys_lla_book_order:
+            # 用正则匹配 @@...@@, 太长了, 替换为|
+            # release 的时候可以在sublime里面手动替换
+            # 这里不能, L6还要读这个book order
+            #s = re.sub(r'(@@.*?@@)', r'|', s)
             f.write(s + "\n")
 
     # 按书本顺序, 保存全部sections
     output_file = 'lla_plus_sections.txt'
-    # 如果只写heading的话, 和上面的一样, 用于比对顺序一致.
+    # 如果只写heading的话, 和上面的一样, debug用, 用于和上面对比顺序.
     only_write_key = False
     global section_map
     assert len(section_map) == len(section_keys_lla_book_order)
@@ -614,6 +689,10 @@ def do_the_job():
                 line = f"{sec_key}"
             else:
                 line = f"{sechead}{seccontent}"
+                # 多行用于比较方便, 只有在保存整个section的时候可能用. 上面的单单key没必要
+                if not utils.one_line_per_section:
+                    # 用正则匹配 @@...@@, 就是加一个\n
+                    line = re.sub(r'(@@.*?@@)', r'\n\1', line)
             
             ofile.write(line)
             ofile.write("\n")
@@ -625,9 +704,10 @@ def do_the_job():
 
 
     print("\nSummary:")
-    assert total_section_num == 4953 and total_sec_cnt == 4953 and len(section_map) == 0
-    assert  total_phrase_num == 22068 and total_phrase_num_in_identical_sections == 22068
-    print(f"identical section number = {total_sec_cnt}")
+    if not debug:
+        assert total_section_num == 4953 and total_sec_cnt == 4953 and len(section_map) == 0
+        assert  total_phrase_num == 22068 and total_phrase_num_in_identical_sections == 22068
+    print(f"identical section number = {total_sec_cnt}, total_runon_phrase_cnt={total_runon_phrase_cnt}")
     print(f"total phrase num in identical sections = {total_phrase_num_in_identical_sections}")
     print(f"by average, each section has phrase num = {total_phrase_num_in_identical_sections} / {total_sec_cnt} = %.2f" % \
             (float(total_phrase_num_in_identical_sections)/total_sec_cnt))

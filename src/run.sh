@@ -16,5 +16,5 @@ if [[ "$PY_VER" != "$REQUIRED_PY_VER" ]]; then
 fi
 echo "✅ Python version OK: $PY_VER"
 
-/c/Python314/python src/generate_ldoce6enen_bugfix.py 2>&1 |& tee log.txt
+/c/Python314/python src/generate_ldoce6enen_bugfix.py 2>&1 |& tee l6_log.txt
 md5sum.exe data/*

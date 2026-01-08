@@ -9,16 +9,25 @@ import time
 import hashlib
 from bs4 import BeautifulSoup, Tag
 
+# 自己的全局变量/函数
+import utils
+
 '''
 解析里面LDOCE6里面的LLA
 866个keyword, 每个keyword有若干个section, 整本LLA一共有4953个section
     每个section里面有
         一个标题heading
         若干个phrase
-            每个phrase里面有解释和例子.
+            每个phrase里面有解释=define和例子=example.
+            有这个phrase的collocation
+                define
+                example
+            这个phease的变体=runon=derivation
+                define?
+                example
 用soup解析html格式. 得到LDOCE6 里面LLA信息
 
-run: PYTHONUTF8=1 python src/generate_ldoce6enen_lla_2.py |& tee lla_log.txt
+run: PYTHONUTF8=1 python src/generate_ldoce6enen_lla_2.py |& tee l6_lla_log.txt
 Parsing...
 
 Summary:
@@ -91,6 +100,10 @@ ALLOWED_ALSO = {
     "also", "usually", "plural", "abbreviation", "past tense and past participle", "or"
 }
 
+# 两个独立的
+debug = 0
+log_info = 0
+
 SECTION_NUM = 4953
 PHRASE_NUM = 22068
 
@@ -159,14 +172,10 @@ def do_the_job():
     start_time = time.time()
     print("Parsing...")
 
-    # 两个独立的
-    debug = 0
-    log_info = 0
-    if debug:
-        # 初始数据
-        input_txt = 'data/bar.html'
-    else:
-        input_txt = 'data/LongmanDictionaryOfContemporaryEnglish6thEnEn_py.txt'
+    #if debug:
+    # 初始数据
+    #input_txt = 'data/bar.html'
+    input_txt = 'data/LongmanDictionaryOfContemporaryEnglish6thEnEn_py.txt'
 
     # verify the md5 of the input file.
     md5 = hashlib.md5(open(input_txt,'rb').read()).hexdigest()
@@ -199,6 +208,9 @@ def do_the_job():
                 test_name = 'init_invalid_name'
             # ======================================= do the modifications =======================================       
             # debug 按字母跑, 而不是每次都从头开始
+            if debug:
+                if test_name != 'people' and test_name != 'thrilled':
+                    continue
             # c = test_name[0]
             # if c not in {'e', 'E'}:
             #     continue
@@ -320,7 +332,7 @@ def do_the_job():
                             cls = s.get("class")
                             #assert cls in (["registerlab"], ["variant"], ["def"], ["neutral"], ["example"], ["thespropform"], ["gloss"]), f"test_name={test_name}, cls={cls}"  
                             if cls == ["def"]:
-                                # 当前 phrase 或者 thespropform 的定义
+                                # 当前 phrase 或者 thespropform=subphrase 的定义
                                 def_cnt += 1
                                 define=s.get_text(strip=True)
                                 assert define, "empty string"
@@ -335,7 +347,7 @@ def do_the_job():
                                 example_idx_in_cur_subphrase = 0
 
                             elif cls == ["example"]:
-                                # phrase的例子, 或者是phrase词组的例子
+                                # phrase的例子, 或者是subphrase的例子
                                 example_cnt_in_cur_phrase += 1
   
                                 example = s.get_text(strip=True)
@@ -367,7 +379,7 @@ def do_the_job():
                                         f"test_name={test_name}, lla_idx={lla_idx}, sec_idx={sec_idx}"
 
                             elif cls == ["registerlab"]:
-                                # 不重要
+                                # 不重要, 这里的registerlab部分可以去掉不要, 在TTS里面没有价值.
                                 registerlab = s.get_text(strip=True)
 
                                 if not registerlab:
@@ -391,7 +403,8 @@ def do_the_job():
                                     if variant_child_cls == ["varitype"]:
                                         also = variant_child.get_text(strip=True)
                                         assert also in ALLOWED_ALSO, f"test_name={test_name}, lla_idx={lla_idx}, sec_idx={sec_idx}, also={also}"
-                                        variant += f"{also} "
+                                        # 这个就是also之类的, 不要
+                                        #variant += f"{also} "
                                     elif variant_child_cls == ["lexvar"]:
                                         variant += variant_child.get_text(strip=True)
                                 assert variant, "empty string"
@@ -406,8 +419,47 @@ def do_the_job():
                                 example_idx_in_cur_subphrase = 0
 
                             elif cls == ["thespropform"]:
-                                # phrase词组
+                                # subphrase
                                 thespropform = s.get_text(strip=True)
+
+                                #debug
+                                # if thespropform.startswith('the American'):
+                                #     None
+
+                                subphrase_children = s.find_all("span", recursive=False)
+                                for subphrase_child in subphrase_children:
+                                    clss = subphrase_child.get("class", [])
+                                    text = subphrase_child.get_text(strip=True)
+                                    if clss == ["neutral"]:
+                                        # 就是一个:, 不管它
+                                        continue
+                                    elif clss == ['littlewords']:
+                                        assert text == 'also', f"text={text}"
+                                        thespropform = thespropform.replace('also', '@@VARIANT@@', 1)
+                                    else:
+                                        assert clss == ['registerlab'], f"clss={clss}"
+                                        if text == 'American spoken':
+                                            # 在末尾, 去掉不要
+                                            assert thespropform.endswith('American spoken')
+                                            thespropform = thespropform.replace('American spoken', '')
+                                        elif text == 'American':
+                                            # 在末尾, 去掉不要
+                                            assert thespropform.endswith('American')
+                                            thespropform = thespropform.replace('American', '')
+                                        elif text == 'British spoken':
+                                            # 替换, 这个registerlab和also等同
+                                            thespropform = thespropform.replace('British spoken', '@@VARIANT@@')
+                                        elif text == 'British':
+                                            # 替换, 这个registerlab和also等同
+                                            if 'British/' in thespropform:
+                                                thespropform = thespropform.replace('British/', '@@VARIANT@@')
+                                            else:
+                                                assert 'British' in thespropform, f"thespropform={thespropform}"
+                                                thespropform = thespropform.replace('British', '@@VARIANT@@')
+                                        else:
+                                            assert False, \
+                                                f"test_name={test_name}, lla_idx={lla_idx}, sec_idx={sec_idx}, text={text}"
+
                                 if thespropform[0] == ":":
                                     thespropform = thespropform[1:].lstrip()
 
@@ -469,17 +521,17 @@ def do_the_job():
     global section_map
     
     # 单单保存key, 字母顺序
-    with open("lla_headings_alpha_order.txt", "w", encoding="utf8") as ofile:
-        for sec_key in sorted(section_map.keys()):
-            line = sec_key
-            # entry = section_map[sec_key]
-            # sechead = entry["sec_heading"]
-            # seccontent = entry["content"]
+    # with open("lla_headings_alpha_order.txt", "w", encoding="utf8") as ofile:
+    #     for sec_key in sorted(section_map.keys()):
+    #         line = sec_key
+    #         # entry = section_map[sec_key]
+    #         # sechead = entry["sec_heading"]
+    #         # seccontent = entry["content"]
 
-            # line = f"{sechead}{seccontent}"
+    #         # line = f"{sechead}{seccontent}"
 
-            ofile.write(line)
-            ofile.write("\n")
+    #         ofile.write(line)
+    #         ofile.write("\n")
 
     # 单单保存key, 书本顺序
     output_file = 'lla_headings.txt'
@@ -500,14 +552,9 @@ def do_the_job():
                 print(f"[ERROR] sec_key not found: {sec_key!r}")
                 #assert False
                 continue
-            
-            # 写入文件
-            #entry = section_map[sec_key]
-            #sechead = entry["sec_heading"]
-            #seccontent = entry["content"]
       
             line = f"{sec_key}"
-      
+
             ofile.write(line)
             ofile.write("\n")
 
@@ -537,6 +584,10 @@ def do_the_job():
             seccontent = entry["content"]
             
             line = f"{sechead}{seccontent}"
+            # 多行用于比较方便, 只有在保存整个section的时候可能用. 上面的单单key没必要
+            if not utils.one_line_per_section:
+                # 用正则匹配 @@...@@, 就是加一个\n
+                line = re.sub(r'(@@.*?@@)', r'\n\1', line)
 
             ofile.write(line)
             ofile.write("\n")
