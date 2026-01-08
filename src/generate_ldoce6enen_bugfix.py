@@ -283,6 +283,12 @@ def do_the_job():
     pattern_delete_one_recap_entry_n = 0
     pattern_delete_one_resit_entry = re.compile(r'LDOCE6_re‧sit_1')
     pattern_delete_one_resit_entry_n = 0
+    # 69
+    pattern_lexvar_class_with_slash = re.compile(r'<span class="lexvar">/')
+    pattern_lexvar_class_with_slash_n = 0
+    # 70, LLA 书本有一样的问题.
+    pattern_get_off_define = re.compile(r'<span class="exp display">get off</span></span><div class="content"><span class="def"> to </span>')
+    pattern_get_off_define_n = 0
 
 
     delete_cur_entry = False
@@ -766,8 +772,19 @@ def do_the_job():
                 delete_cur_entry = True
             # txt = 98f0174a1e2318aeb4b1402848e58a75 20240202 relese 4
 
+            ## Remove '/'. '<span class="lexvar">/' -> '<span class="lexvar">' 3358 times.
+            line,n = pattern_lexvar_class_with_slash.subn(r'<span class="lexvar">', line)
+            pattern_lexvar_class_with_slash_n += n
+
+            ## Fix LLA 'get off' phrase in 'to get off a bus, plane etc' heading. 'to' -> 'to leave a bus, train, etc at the end of a journey' 5 times (disembark, disembarkation, dismount, get, leave).
+            if any(test_name == c for c in ["disembark", "disembarkation", "dismount", "get", "leave"]):
+                line,n = pattern_get_off_define.subn(r'<span class="exp display">get off</span></span><div class="content"><span class="def"> to leave a bus, train, etc at the end of a journey </span>', line)
+                pattern_get_off_define_n += n
+
+
             # to add new here:
             # <title>. 'XXX' -> 'YYY' Z times (1, 2, ..., Z).
+
 
             if line_position == POS_HEAD:
                 write_name = line
@@ -910,6 +927,10 @@ def do_the_job():
         assert pattern_delete_one_downstate_entry_n == 1
         assert pattern_delete_one_recap_entry_n == 1
         assert pattern_delete_one_resit_entry_n == 1
+        # 69
+        assert pattern_lexvar_class_with_slash_n == 3358
+        # 70
+        assert pattern_get_off_define_n == 5
 
 
     output_txt_md5 = hashlib.md5(open(output_txt,'rb').read()).hexdigest()
@@ -918,7 +939,10 @@ def do_the_job():
         #assert output_txt_md5 == '1e5030fa85a3b7c139baafd8972b42fd' #20240109 release 1
         #assert output_txt_md5 == '0fade275811b5a2c5252ddefd9e65fe3' #20240120 release 2
         #assert output_txt_md5 == '7899184ab97cfc5bc80632d9253bbee7' #20240122 release 3
-        assert output_txt_md5 == '98f0174a1e2318aeb4b1402848e58a75' #20240202 release 4
+        #assert output_txt_md5 == '98f0174a1e2318aeb4b1402848e58a75' #20240202 release 4
+        #assert output_txt_md5 == '7b184a4a934ebf6890abd97c7a4086b7' #after 69
+        assert output_txt_md5 == '5c574c44eecc41f81851c74f69c2e1d5' #after 70
+        None
 
     print("Done with the job, totally takes %s s" % (time.time() - start_time))
 

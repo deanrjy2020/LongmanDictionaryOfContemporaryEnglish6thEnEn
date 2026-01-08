@@ -66,4 +66,6 @@
 66. LDOCE6 headword special char fix. e.g. 'é' -> 'e', only changed in the headword, not the entry body.
 67. LDOCE6 quotation mark fix. (“->") (”->") (""->") (''->") (‘->') (’->').
 68. LDOCE6 entry deletion. Delete 'down‧state', 're‧cap' and 're‧sit' entry.
-69. ')
+69. Remove '/'. '<span class="lexvar">/' -> '<span class="lexvar">' 3358 times.
+70. Fix LLA 'get off' phrase in 'to get off a bus, plane etc' heading. 'to' -> 'to leave a bus, train, etc at the end of a journey' 5 times (disembark, disembarkation, dismount, get, leave).
+71. ')

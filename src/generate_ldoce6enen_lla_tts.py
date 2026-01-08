@@ -8,6 +8,8 @@ import edge_tts
 from edge_tts import Communicate
 import re
 
+import srt_to_lrc
+
 '''
 
 python -m pip install edge-tts
@@ -22,16 +24,16 @@ max_topic_id = 4953
 
 # started with 1, 1 ~ 4953 
 start_topic_id = 1
-# 每次生成10个文件, 10*5 = 50个topic
-file_num = 10
+# 每次生成20个文件, 20*5 = 100个topic
+file_num = 20
 
 # 单单生成txt, 用于检查, 不生成mp3 (太慢)
-dry_run = True
+dry_run = False
 if dry_run:
     start_topic_id = 1
     file_num = 991 # max file num
 
-input_txt = "lla_sections.txt"
+input_txt = "results/lla_sections_oneline.txt"
 use_voice = "en-US-AndrewNeural"
 #use_voice = "en-US-GuyNeural"
 #use_voice = "en-US-BrianNeural"
@@ -51,6 +53,11 @@ BEFORE_GLOSS_BREAK = '\n'
 BEFORE_VARIANT_BREAK = '\n'
 BEFORE_EXAMPLE_BREAK = '\n\n'
 END_SECTION_BREAK = '\n\n'
+
+NUM_WORDS = [
+    "one", "two", "three", "four", "five", "six", "seven",
+    "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"
+]
 
 def read_n_lines_from_lla(path: str, start_line: int, n: int) -> str:
     """
@@ -72,11 +79,7 @@ def read_n_lines_from_lla(path: str, start_line: int, n: int) -> str:
 
             line = raw_line
 
-            # 如果是 '@@/', / 不要了.
-            global debug_replacement_cnt
-            debug_replacement_cnt += line.count("@@VARIANT@@/")
-            line = line.replace("@@VARIANT@@/", "@@VARIANT@@")
-            # 唯一一处'/@@'情况, 本来就是小bug, / 不应该有的.
+            # 唯一一处'/@@'情况, 本来就是小bug, / 不应该有的. todo, 在L6里面修正
             line = line.replace("most hated man./@@", "most hated man.@@")
             assert '@@/' not in line, f"line_num={line_num}, line={line}"
             assert '/@@' not in line, f"line_num={line_num}, line={line}"
@@ -87,42 +90,49 @@ def read_n_lines_from_lla(path: str, start_line: int, n: int) -> str:
             line = line.replace("/", " or ")
             assert "/" not in line, line
 
-            # todo, 用简单的
+            # 替换 PHRASE<n>
+            # line = line.replace("@@PHRASE0@@", f"{BEFORE_PHRASE_BREAK}Phrase one: {NEW_LINE}")
+            def repl_phrase(m):
+                idx = int(m.group(1))
+                # 最多14个phrase, 即 0 ~ 13
+                assert 0 <= idx <= 13, f"phrase index out of range: {idx}"
+                return f"{BEFORE_PHRASE_BREAK}Phrase {NUM_WORDS[idx]}: {NEW_LINE}"
+            line = re.sub(r"@@PHRASE(\d+)@@", repl_phrase, line)
+            assert not re.search(r"@@PHRASE\d+@@", line), line
+
+            # 替换 VARIANT
+            # 先处理已经带 also 的情况，避免重复
+            assert '@@VARIANT@@also' not in line, f"line={line}"
+            #line = line.replace("@@VARIANT@@also ", f"{BEFORE_VARIANT_BREAK}Also: {NEW_LINE}")
+            # 再处理普通 VARIANT，统一加 also
+            line = line.replace("@@VARIANT@@", f"{BEFORE_VARIANT_BREAK}Also: {NEW_LINE}")
+
+            # 替换 DEFINE
             line = line.replace("@@DEFINE@@", f"{BEFORE_DEFINE_BREAK}This means ")
-            # 用which means
-            line = line.replace("@@GLOSS@@", f"{BEFORE_GLOSS_BREAK}In other words, {NEW_LINE}")
-            # todo, 啰嗦, 换一个短的
-            line = line.replace("@@VARIANT@@", f"{BEFORE_VARIANT_BREAK}You can also hear people say: {NEW_LINE}")
 
-            # todo, 用 collocation 1.2... ?
-            line = line.replace("@@THESPROPFORM0@@", f"{BEFORE_THESPROPFORM_BREAK}You can also say: {NEW_LINE}")
-            line = line.replace("@@THESPROPFORM1@@", f"{BEFORE_THESPROPFORM_BREAK}You may also hear phrases like: {NEW_LINE}")
-            line = line.replace("@@THESPROPFORM2@@", f"{BEFORE_THESPROPFORM_BREAK}Another common phrase is: {NEW_LINE}")
-            line = line.replace("@@THESPROPFORM3@@", f"{BEFORE_THESPROPFORM_BREAK}People often say: {NEW_LINE}")
-            line = line.replace("@@THESPROPFORM4@@", f"{BEFORE_THESPROPFORM_BREAK}Another way to put it is: {NEW_LINE}")
-            # 剩下的用一样
-            line = re.sub(r"@@THESPROPFORM\d+@@", f"{BEFORE_THESPROPFORM_BREAK}You might also hear: {NEW_LINE}", line)
-            # 都处理干净了
-            assert not re.search(r"@@THESPROPFORM\d+@@", line), line
-
-            line = line.replace("@@EXAMPLE0@@", f"{BEFORE_EXAMPLE_BREAK}For example: {NEW_LINE}")
-            line = line.replace("@@EXAMPLE1@@", f"{BEFORE_EXAMPLE_BREAK}Another example: {NEW_LINE}")
-            # 第3个开始直接用 example 3, todo
-            line = line.replace("@@EXAMPLE2@@", f"{BEFORE_EXAMPLE_BREAK}And one more example: {NEW_LINE}")
-            line = line.replace("@@EXAMPLE3@@", f"{BEFORE_EXAMPLE_BREAK}Here's another example: {NEW_LINE}")
-            line = line.replace("@@EXAMPLE4@@", f"{BEFORE_EXAMPLE_BREAK}Example five: {NEW_LINE}")
-            line = line.replace("@@EXAMPLE5@@", f"{BEFORE_EXAMPLE_BREAK}Example six: {NEW_LINE}")
-            line = line.replace("@@EXAMPLE6@@", f"{BEFORE_EXAMPLE_BREAK}Example seven: {NEW_LINE}")
-            line = line.replace("@@EXAMPLE7@@", f"{BEFORE_EXAMPLE_BREAK}Example eight: {NEW_LINE}")
-            # 都处理干净了
+            # 替换 EXAMPLE<n>
+            # line = line.replace("@@EXAMPLE0@@", f"{BEFORE_EXAMPLE_BREAK}Example one: {NEW_LINE}")
+            def repl_example(m):
+                idx = int(m.group(1))
+                assert 0 <= idx <= 7, f"example index out of range: {idx}"
+                return f"{BEFORE_EXAMPLE_BREAK}Example {NUM_WORDS[idx]}: {NEW_LINE}"
+            line = re.sub(r"@@EXAMPLE(\d+)@@", repl_example, line)
             assert not re.search(r"@@EXAMPLE\d+@@", line), line
 
-            # todo, 直接用phrase one, two...
-            line = line.replace("@@PHRASE0@@", f"{BEFORE_PHRASE_BREAK}Let's start with: {NEW_LINE}")
-            line = line.replace("@@PHRASE1@@", f"{BEFORE_PHRASE_BREAK}Let's talk about the next one: {NEW_LINE}")
-            line = line.replace("@@PHRASE2@@", f"{BEFORE_PHRASE_BREAK}Let's look at the next one: {NEW_LINE}")
-            # 剩下的用一样
-            line = re.sub(r"@@PHRASE\d+@@", f"{BEFORE_PHRASE_BREAK}Next, {NEW_LINE}", line)
+            # 替换 THESPROPFORM<n>
+            #line = line.replace("@@THESPROPFORM0@@", f"{BEFORE_THESPROPFORM_BREAK}You can say: {NEW_LINE}")
+            def repl_thespropform(m):
+                idx = int(m.group(1))
+                assert 0 <= idx <= 10, f"alt index out of range: {idx}"
+                # Alt = Alternative expressions (替代表达)
+                return f"{BEFORE_THESPROPFORM_BREAK}Alt {NUM_WORDS[idx]}: {NEW_LINE}"
+            line = re.sub(r"@@THESPROPFORM(\d+)@@", repl_thespropform, line)
+            assert not re.search(r"@@THESPROPFORM\d+@@", line), line
+
+            # 替换 GLOSS
+            line = line.replace("@@GLOSS@@", f"{BEFORE_GLOSS_BREAK}Meaning: {NEW_LINE}")
+
+            # todo, 后面修正派生词后用Form (词形变化)
 
             # line_num = topic id
             processed_lines.append(f"Topic {line_num}: {line} {END_SECTION_BREAK}")
@@ -137,9 +147,17 @@ def save_text(path: str, text: str):
     with open(path, "w", encoding="utf-8") as f:
         f.write(text)
 
-async def text_to_mp3(
+'''
+examples:
+https://github.com/rany2/edge-tts/blob/master/examples/sync_audio_streaming_with_predefined_voice_subtitles.py
+
+https://blog.csdn.net/qq_37292005/article/details/148950758
+'''
+#async def text_to_mp3(
+def text_to_mp3(
     text: str,
     output_mp3: str,
+    output_srt: str,
     voice: str,
     rate: str,
     volume: str
@@ -153,7 +171,20 @@ async def text_to_mp3(
         rate=rate,
         volume=volume,
     )
-    await communicate.save(output_mp3)
+
+    submaker = edge_tts.SubMaker()
+    with open(output_mp3, "wb") as file:
+        for chunk in communicate.stream_sync():
+            if chunk["type"] == "audio":
+                file.write(chunk["data"])
+            elif chunk["type"] in ("WordBoundary", "SentenceBoundary"):
+                submaker.feed(chunk)
+
+    with open(output_srt, "w", encoding="utf-8") as file:
+        file.write(submaker.get_srt())
+    # await communicate.save(
+    #     output_mp3
+    # )
 
 
 def do_the_job():
@@ -164,6 +195,7 @@ def do_the_job():
     os.makedirs(txt_folder, exist_ok=True)
     
     for i in range(file_num):
+        print(f"\n")
         start = start_topic_id + i * topics_per_file
         end = start + topics_per_file - 1
         if end >= max_topic_id:
@@ -183,6 +215,8 @@ def do_the_job():
         # 文件路径
         raw_txt_path = os.path.join(txt_folder, f"{base}_lla.txt")
         tts_txt_path = os.path.join(txt_folder, f"{base}_tts.txt")
+        srt_path     = os.path.join(txt_folder, f"{base}.srt")
+        lrc_path     = os.path.join(mp3_folder, f"{base}.lrc")
         mp3_path     = os.path.join(mp3_folder, f"{base}.mp3")
 
         # 保存
@@ -194,20 +228,23 @@ def do_the_job():
         if dry_run:
             continue
 
-        print(f"\n=== Generating {mp3_path} ===")
-        asyncio.run(
-            text_to_mp3(
-                text=tts_text,
-                output_mp3=mp3_path,
-                voice=use_voice,
-                rate="-20%", # rate: str = "+0%",
-                volume="+0%",
-            )
+        print(f"=== Generating {mp3_path} ===")
+        #asyncio.run(
+        text_to_mp3(
+            text=tts_text,
+            output_mp3=mp3_path,
+            output_srt=srt_path,
+            voice=use_voice,
+            rate="-20%", # rate: str = "+0%",
+            volume="+0%",
         )
+        #)
+        srt_to_lrc.srt_to_lrc(srt_path, lrc_path)
+
         print(f"MP3 saved to: {mp3_path}")
 
 if __name__ == "__main__":
     start_time = time.time()
     do_the_job()
-    print(f"replacement cnt = {debug_replacement_cnt}")
+    assert debug_replacement_cnt == 0, f"debug_replacement_cnt = {debug_replacement_cnt}"
     print("Done, takes %.2f s" % (time.time() - start_time))
