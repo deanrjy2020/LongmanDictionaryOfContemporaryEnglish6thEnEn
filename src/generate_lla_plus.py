@@ -11,12 +11,14 @@ from bs4 import BeautifulSoup, Tag
 from copy import copy
 from collections import Counter
 
+# 自己的全局变量/函数
+import utils
+
 '''
 
 mdx: https://forum.freemdict.com/t/topic/42061
 
 用soup解析html格式. 得到里面LLA信息
-弄到一半...
 
 run: PYTHONUTF8=1 python src/generate_lla_plus.py |& tee lla_plus_log.txt
 
@@ -25,14 +27,8 @@ run: PYTHONUTF8=1 python src/generate_lla_plus.py |& tee lla_plus_log.txt
 \n@@\1@@
 
 book order
-BC里面去掉不重要的, 947 diff
-
-两边都换行
-比较, 得到2097 diff
-
 改plus这边去match,
-
-76 diff
+78 diff
 '''
 
 #不要加\n, 用上面的regex在文本里面替换加上\n
@@ -47,34 +43,28 @@ def hash_text(s):
     return hashlib.sha256(s.encode("utf8")).hexdigest()
 
 def register_section(secheading, all_phrase, sec_value, phrase_cnt, test_name):
-    # 里面有全大写的, 影响排序
+    # 处理heading
     if 'to ask someone questions for a newspaper' in secheading or \
         'when you believe or do not believe that' in secheading or \
         'the Internet and places on the Internet' in secheading or \
         'things you do on the Internet' in secheading:
+        # 这几个不用变小写:
         # 'to ask someone questions for a newspaper, TV programme etc' 里面的TV不改.
         # 'when you believe or do not believe that God'
         # 'the Internet and places on the Internet'
         # 'things you do on the Internet'
         None
     else:
+        # 里面有全大写的, 影响排序, 变小写
         secheading = secheading.lower()
-    # 两个或以上空格 → 一个空格
-    secheading = re.sub(r'\s{2,}', ' ', secheading)
-    # 和ldoce6一样
-    secheading = secheading.replace(" / ", "/")
 
-    # 两个或以上空格 → 一个空格
-    all_phrase = re.sub(r'\s{2,}', ' ', all_phrase)    
-    all_phrase = all_phrase.replace(" / ", "/")
+    # lla plus 的格式问题, 导致'/Hey'没有被捕获到, 这里加上.
+    if 'ways of beginning a letter' == secheading:
+        all_phrase += '/Hey'
 
-    # 处理 content问题
-    # 两个或以上空格 → 一个空格
-    sec_value = re.sub(r'\s{2,}', ' ', sec_value)
-    # 和ldoce6一样
-    sec_value = sec_value.replace(" / ", "/")
-    #sec_value = sec_value.replace("’", "'")
-
+    # phrase里面少了一个空格, 影响key, 其他地方也有, 但是不管了. plus mdx里面有大量这样的情况
+    if 'to do a test on something in order to check it or find out about it' == secheading:
+        all_phrase = all_phrase.replace("anexperiment", "an experiment")
 
     global total_sec_cnt
     global total_phrase_num_in_identical_sections
@@ -141,6 +131,16 @@ def get_en_text(obj) -> str:
     text = copy_obj.get_text(strip=True)
     assert_no_chinese(text)
 
+    # 在程序里修方便, 直接改lla plus mdx txt麻烦 (除非没办法)
+    # 修正lla plus mdx里面一些小bug, 和L6匹配.
+    text = text.replace("’", "'")
+    text = text.replace("‘", "'")
+    # 两个或以上空格 → 一个空格
+    text = re.sub(r'\s{2,}', ' ', text)
+    # /两边不要空格, 和ldoce6一样
+    text = text.replace(" / ", "/")
+
+
     return text
 
 def parse_section(section):
@@ -168,7 +168,8 @@ def parse_section(section):
     for secnr in secdef.find_all("span", class_="SECNR"):
         secnr.decompose()
     # 取剩余文本
-    secheading = secdef.get_text(strip=True)
+    #secheading = secdef.get_text(strip=True)
+    secheading = get_en_text(secdef)
     assert_no_chinese(secheading)
     assert secheading[0].isalpha(), f"test_name={test_name}, text={secheading}"
     print(f"secheading={secheading}")
@@ -209,8 +210,9 @@ def parse_section(section):
                 # for zh in copy_exp.find_all("zh_cn"):
                 #     zh.decompose()
                 
-                phrase = phrase_block_child.get_text(strip=True)
-                assert_no_chinese(phrase)
+                # phrase = phrase_block_child.get_text(strip=True)
+                # assert_no_chinese(phrase)
+                phrase = get_en_text(phrase_block_child)
 
                 # one_sec_all_phrase_cnt 就是phrase idx in cur section
                 tmp = f"{NEW_LINE}@@PHRASE{one_sec_all_phrase_cnt}@@{phrase}"
@@ -220,7 +222,9 @@ def parse_section(section):
                 one_sec_all_phrase += tmp
                 one_sec_all_phrase_cnt += 1
 
+                # phrase 有自己的example
                 example_idx = 0
+                # phrase 有自己的subphrase
                 subphrase_idx_in_phrase = 0
 
             elif phrase_block_child.get("class") == ["PRON"]:
@@ -268,6 +272,7 @@ def parse_section(section):
                         print(tmp)
                         seccontent += tmp
 
+                        # thespropform 有自己的example
                         example_idx = 0
                         subphrase_idx_in_phrase += 1
 
@@ -352,7 +357,7 @@ def parse_section(section):
                 subphrase_idx_in_phrase += 1
 
             elif phrase_block_child.get("class") == ["RunOn"]:
-                continue
+                #continue
                 # LDOCE6里面可能没有这个部分, todo
                 runon_children = phrase_block_child.find_all("span", recursive=False)
                 for runon_child_idx, runon_child in enumerate(runon_children):
@@ -502,29 +507,17 @@ def do_the_job():
     # verify the md5 of the input file.
     md5 = hashlib.md5(open(filename,'rb').read()).hexdigest()
     if not debug:
+        #assert md5 == '68406aca5bccd72b352ff18737c66483'
         '''
         todo, 手动改了:
-        ’ -> '
-        
-        ‘ -> '
-        
-        to ask someone questions for a newspaper, tv programme etc@@PHRASE0@@interview@@PHRASE1@@interview
-        -> 
-        to ask someone questions for a newspaper, TV programme etc@@PHRASE0@@interview@@PHRASE1@@interview
-
-        ways of beginning a letter@@PHRASE0@@Dear Sir/Sirs/Sir or Madam@@PHRASE1@@Dear Mr Wiggins/Ms Harper@@PHRASE2@@Dear Jim/Sarah etc@@PHRASE3@@Hi
-        -> Hi / Hey
-
-        'anexperiment' -> 'an experiment'
-
         add keyword的 2. to add more to an amount or cost 下面的add phrase的中文结构修正:
         <zh_cn>增加；添加<zh_cn>
+        <zh_cn>增加；添加<zh_cn><span class="Exas"><span class="EXAMPLE"> They seem to have added a 10% service charge
         ->
-        <zh_cn>增加；添加</zh_cn>
-
-        better then all others里面一个空的PROPFORM span删掉.
+        <zh_cn>增加；添加</zh_cn><span class="Exas"><span class="EXAMPLE"> They seem to have added a 10% service charge
         '''
-        #assert md5 == '68406aca5bccd72b352ff18737c66483'
+        assert md5 == '9eaaa1b4d2d27a9ce5ae5c8a45fdaeae'
+        #不做了: better then all others里面一个空的PROPFORM span删掉.
         None
 
     POS_HEAD = 'POSITION_HEAD'
@@ -584,11 +577,15 @@ def do_the_job():
     # 单单保存heading到文件.
     with open("lla_plus_headings.txt", "w", encoding="utf-8") as f:
         for s in section_keys_lla_book_order:
+            # 用正则匹配 @@...@@, 太长了, 替换为|
+            # release 的时候可以在sublime里面手动替换
+            # 这里不能, L6还要读这个book order
+            #s = re.sub(r'(@@.*?@@)', r'|', s)
             f.write(s + "\n")
 
     # 按书本顺序, 保存全部sections
     output_file = 'lla_plus_sections.txt'
-    # 如果只写heading的话, 和上面的一样, 用于比对顺序一致.
+    # 如果只写heading的话, 和上面的一样, debug用, 用于和上面对比顺序.
     only_write_key = False
     global section_map
     assert len(section_map) == len(section_keys_lla_book_order)
@@ -614,6 +611,10 @@ def do_the_job():
                 line = f"{sec_key}"
             else:
                 line = f"{sechead}{seccontent}"
+                # 多行用于比较方便, 只有在保存整个section的时候可能用. 上面的单单key没必要
+                if not utils.one_line_per_section:
+                    # 用正则匹配 @@...@@, 就是加一个\n
+                    line = re.sub(r'(@@.*?@@)', r'\n\1', line)
             
             ofile.write(line)
             ofile.write("\n")

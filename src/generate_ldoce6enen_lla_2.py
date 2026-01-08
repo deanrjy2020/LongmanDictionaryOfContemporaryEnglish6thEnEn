@@ -9,16 +9,25 @@ import time
 import hashlib
 from bs4 import BeautifulSoup, Tag
 
+# 自己的全局变量/函数
+import utils
+
 '''
 解析里面LDOCE6里面的LLA
 866个keyword, 每个keyword有若干个section, 整本LLA一共有4953个section
     每个section里面有
         一个标题heading
         若干个phrase
-            每个phrase里面有解释和例子.
+            每个phrase里面有解释=define和例子=example.
+            有这个phrase的collocation
+                define
+                example
+            这个phease的变体=runon=derivation
+                define?
+                example
 用soup解析html格式. 得到LDOCE6 里面LLA信息
 
-run: PYTHONUTF8=1 python src/generate_ldoce6enen_lla_2.py |& tee lla_log.txt
+run: PYTHONUTF8=1 python src/generate_ldoce6enen_lla_2.py |& tee l6_lla_log.txt
 Parsing...
 
 Summary:
@@ -469,17 +478,17 @@ def do_the_job():
     global section_map
     
     # 单单保存key, 字母顺序
-    with open("lla_headings_alpha_order.txt", "w", encoding="utf8") as ofile:
-        for sec_key in sorted(section_map.keys()):
-            line = sec_key
-            # entry = section_map[sec_key]
-            # sechead = entry["sec_heading"]
-            # seccontent = entry["content"]
+    # with open("lla_headings_alpha_order.txt", "w", encoding="utf8") as ofile:
+    #     for sec_key in sorted(section_map.keys()):
+    #         line = sec_key
+    #         # entry = section_map[sec_key]
+    #         # sechead = entry["sec_heading"]
+    #         # seccontent = entry["content"]
 
-            # line = f"{sechead}{seccontent}"
+    #         # line = f"{sechead}{seccontent}"
 
-            ofile.write(line)
-            ofile.write("\n")
+    #         ofile.write(line)
+    #         ofile.write("\n")
 
     # 单单保存key, 书本顺序
     output_file = 'lla_headings.txt'
@@ -500,14 +509,9 @@ def do_the_job():
                 print(f"[ERROR] sec_key not found: {sec_key!r}")
                 #assert False
                 continue
-            
-            # 写入文件
-            #entry = section_map[sec_key]
-            #sechead = entry["sec_heading"]
-            #seccontent = entry["content"]
       
             line = f"{sec_key}"
-      
+
             ofile.write(line)
             ofile.write("\n")
 
@@ -537,6 +541,10 @@ def do_the_job():
             seccontent = entry["content"]
             
             line = f"{sechead}{seccontent}"
+            # 多行用于比较方便, 只有在保存整个section的时候可能用. 上面的单单key没必要
+            if not utils.one_line_per_section:
+                # 用正则匹配 @@...@@, 就是加一个\n
+                line = re.sub(r'(@@.*?@@)', r'\n\1', line)
 
             ofile.write(line)
             ofile.write("\n")
