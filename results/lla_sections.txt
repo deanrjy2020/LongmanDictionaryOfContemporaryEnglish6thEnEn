@@ -405,7 +405,7 @@ to officially accept a new law or proposal
 @@DEFINE@@if a suggestion, proposal etc is carried , most of the people at an official meeting vote in favour of it and it is accepted
 @@EXAMPLE0@@Chao's proposal for a new downtown parking facility was carried at yesterday's council meeting.
 @@THESPROPFORM0@@be carried by 20 votes/100 votes etc
-@@EXAMPLE0@@The motion to restrict handgun sales was carried by 76 votes(=76 more people voted for it than voted against it).
+@@EXAMPLE0@@The motion to restrict handgun sales was carried by 76 votes (=76 more people voted for it than voted against it ).
 @@PHRASE4@@uphold
 @@DEFINE@@if a court or a judge upholds a legal decision made by another court, they decide that it is right and they accept it
 @@EXAMPLE0@@The court's decision upheld state laws prohibiting doctor-assisted suicide.
@@ -799,7 +799,7 @@ to perform in plays, films etc
 @@PHRASE0@@act
 @@EXAMPLE0@@In recent years Lewis has been acting in television dramas.
 @@EXAMPLE1@@He learned to act when he was in high school.
-@@EXAMPLE2@@That woman just can't act!(=is bad at acting)
+@@EXAMPLE2@@That woman just can't act! (=is bad at acting )
 @@PHRASE1@@play
 @@DEFINE@@to play the part of a particular character
 @@EXAMPLE0@@Milla Jovovich plays Joan of Arc in 'The Messenger'.
@@ -958,7 +958,7 @@ to add more to an amount or cost
 @@THESPROPFORM0@@add something to something
 @@EXAMPLE0@@New fire-safety equipment had to be installed, adding thousands of dollars to the cost of the repairs.
 @@THESPROPFORM1@@add to something
-@@EXAMPLE0@@Catherine won't mind if you add to her workload(=give her more work)-- she needs the extra money.
+@@EXAMPLE0@@Catherine won't mind if you add to her workload (=give her more work ) -- she needs the extra money.
 @@PHRASE1@@put something on
 @@DEFINE@@to add an amount of money, especially a tax, to the cost of something
 @@EXAMPLE0@@There are rumours that the government plans to put 20p on the cost of a packet of cigarettes.
@@ -1865,7 +1865,7 @@ someone's advice about what you should do
 @@EXAMPLE0@@That's sound advice - I'll definitely bear it in mind.
 @@PHRASE1@@tip
 @@DEFINE@@a simple but useful piece of advice about how to do something more easily or effectively
-@@EXAMPLE0@@Here's a good ti if you spill red wine on your carpet, pour salt on it to remove it.
+@@EXAMPLE0@@Here's a good tip: if you spill red wine on your carpet, pour salt on it to remove it.
 @@THESPROPFORM0@@tip on
 @@EXAMPLE0@@a leaflet containing some tips on how to take better photos
 @@PHRASE2@@recommendation
@@ -1987,8 +1987,7 @@ after a particular period of time has passed
 @@EXAMPLE1@@The fire alarm went off and within minutes the building had been cleared.
 @@THESPROPFORM1@@within a month/a few days etc of doing something
 @@EXAMPLE0@@Within six years of joining the company he was Managing Director.
-@@THESPROPFORM2@@within a short period/space
-@@VARIANT@@of time
+@@THESPROPFORM2@@within a short period/space of time
 @@GLOSS@@surprisingly quickly
 @@EXAMPLE0@@Within a short space of time, Gerry had managed to offend everyone in the group.
 @@PHRASE2@@in
@@ -14142,7 +14141,7 @@ carrying a lot of things
 @@EXAMPLE0@@The branches of the trees were weighed down with fruit.
 @@EXAMPLE1@@She struggled along the street, weighed down by bags.
 @@PHRASE2@@under the weight of
-@@DEFINE@@if someone or something falls or moves unsteadily under the weight of of something, they do this because they are carrying something that is too heavy for them to support
+@@DEFINE@@if someone or something falls or moves unsteadily under the weight of something, they do this because they are carrying something that is too heavy for them to support
 @@EXAMPLE0@@Paul staggered under the weight of two backpacks.
 @@PHRASE3@@overloaded
 @@DEFINE@@if a vehicle is overloaded , it is holding or carrying too many things, with the result that it can only move slowly and it may not be safe
@@ -16769,7 +16768,7 @@ when you are very careful about choosing things
 @@EXAMPLE0@@We're not really picky eaters, but we don't eat much fast food.
 @@PHRASE2@@be particular about
 @@DEFINE@@to be very careful about choosing only the very best of something, or only exactly what you like, usually with the result that people think you are too careful about it
-@@THESPROPFORM0@@be particular about about
+@@THESPROPFORM0@@be particular about
 @@EXAMPLE0@@He's very particular about the clothes he buys.
 @@THESPROPFORM1@@be particular about what/where etc
 @@EXAMPLE0@@Monica is particular about what she eats - no meat, and only organic vegetables.
@@ -17564,7 +17563,7 @@ clothes that you wear for sport
 @@EXAMPLE0@@Don't forget to bring your swimming things when we go to Brighton.
 @@EXAMPLE1@@I left my gym stuff in the car.
 @@PHRASE1@@kit
-@@DEFINE@@a set of clothes that that you wear when you play football, tennis etc
+@@DEFINE@@a set of clothes that you wear when you play football, tennis etc
 @@EXAMPLE0@@I told the children to put on their gym kit and go outside.
 @@EXAMPLE1@@Roz keeps her squash kit at the office and plays at lunchtime.
 @@PHRASE2@@strip
@@ -18687,7 +18686,7 @@ a company
 @@PHRASE2@@business
 @@DEFINE@@a company that sells or produces goods or provides services, especially one that employs only a small number of people or only one person
 @@EXAMPLE0@@Jack's thinking of starting his own business.
-@@EXAMPLE1@@Several small businesses have folded(=closed)in recent months.
+@@EXAMPLE1@@Several small businesses have folded (=closed ) in recent months.
 @@THESPROPFORM0@@manage/run a business
 @@EXAMPLE0@@Don and his wife run their own business.
 @@THESPROPFORM1@@set up/start a business
@@ -20962,7 +20961,7 @@ to start doing something again
 @@PHRASE1@@go back to/revert to
 @@DEFINE@@to start behaving in a particular way again, after you had decided not to or when you are not supposed to; revert is more formal than go back to
 @@EXAMPLE0@@I went to a school where we had to speak French all the time, but outside school hours I reverted to English.
-@@EXAMPLE1@@He's been in the hospital a couple of times, but he keeps going back to drinking.(=starts drinking alcohol again)
+@@EXAMPLE1@@He's been in the hospital a couple of times, but he keeps going back to drinking. (=starts drinking alcohol again )
 @@THESPROPFORM0@@go back to/revert to doing something
 @@EXAMPLE0@@Do you think she'll go back to using drugs?
 @@EXAMPLE1@@We go home for Christmas and revert to being children again.
@@ -27285,7 +27284,7 @@ ways of asking about direction
 @@EXAMPLE0@@Which way are you going? Maybe we can share a cab.
 @@EXAMPLE1@@"Excuse me, which way is the Natural History Museum?" "That way. Keep walking and you'll see it on the left."
 @@PHRASE1@@which direction
-@@DEFINE@@use this when you when you want to know exact details about which direction something is in, about which direction someone is travelling in etc
+@@DEFINE@@use this when you want to know exact details about which direction something is in, about which direction someone is travelling in etc
 @@EXAMPLE0@@Which direction do we take once we reach the top of the hill?
 @@PHRASE2@@ask somebody how to get to/ask somebody the way/ask the way
 @@DEFINE@@to ask someone the way to a place, especially when you have already started your journey
@@ -29530,7 +29529,7 @@ to go down
 @@EXAMPLE0@@You go down a steep slope, then turn left at the bottom of the hill.
 @@EXAMPLE1@@Right, here's the ladder. Who's going down first?
 @@THESPROPFORM0@@go down to
-@@EXAMPLE0@@I'll go down(=downstairs)to the kitchen and get you a glass of water.
+@@EXAMPLE0@@I'll go down (=downstairs ) to the kitchen and get you a glass of water.
 @@PHRASE1@@come down
 @@DEFINE@@if a plane, bomb etc comes down somewhere, it comes down to the ground there, especially by accident
 @@EXAMPLE0@@Airline officials believe that the plane came down somewhere in the Andes mountains.
@@ -29909,7 +29908,7 @@ drinks that contain alcohol
 @@PHRASE0@@alcohol
 @@DEFINE@@drinks that contain alcohol - used especially in rules and warnings about alcoholic drinks
 @@EXAMPLE0@@We're not allowed to serve alcohol to people under 18.
-@@EXAMPLE1@@low-alcohol wines(=not containing a lot of alcohol)
+@@EXAMPLE1@@low-alcohol wines (=not containing a lot of alcohol )
 @@EXAMPLE2@@He doesn't drink alcohol or smoke.
 @@EXAMPLE3@@She could smell alcohol on his breath.
 @@PHRASE1@@drink
@@ -30638,7 +30637,7 @@ before the usual or expected time
 @@DEFINE@@if you arrive somewhere or finish something with time to spare , you arrive or finish before the time when you have to arrive or finish
 @@EXAMPLE0@@In spite of the bad traffic, we reached London with plenty of time to spare.
 @@THESPROPFORM0@@with ten minutes/half an hour etc to spare
-@@EXAMPLE0@@I finished the test with just two minutes to spare(=two minutes before the end).
+@@EXAMPLE0@@I finished the test with just two minutes to spare (=two minutes before the end ).
 too early
 @@PHRASE0@@too early
 @@EXAMPLE0@@Too much success too early can cause you to grow overconfident.
@@ -42248,7 +42247,7 @@ frightened of someone or something
 @@THESPROPFORM2@@afraid to do something
 @@EXAMPLE0@@She was afraid to speak up in front of all these important people.
 @@THESPROPFORM3@@afraid of doing something
-@@EXAMPLE0@@I didn't tell anyone, because I was afraid of being punished(=afraid I might be punished).
+@@EXAMPLE0@@I didn't tell anyone, because I was afraid of being punished (=afraid I might be punished ).
 @@PHRASE2@@scared
 @@DEFINE@@frightened
 @@EXAMPLE0@@The first time I went on a motorcycle I was really scared.
@@ -46495,7 +46494,7 @@ guilty
 @@PHRASE2@@culpable
 @@DEFINE@@guilty of causing something bad to happen, especially because you did not do anything to prevent it - used especially in formal or legal contexts
 @@EXAMPLE0@@If people develop smoking-related diseases, are they or the tobacco companies culpable?
-@@EXAMPLE1@@Lawyers are debating whether allowing a terminally ill patient to die amounts to culpable homicide(=a legal decision that someone was criminally guilty of the death).
+@@EXAMPLE1@@Lawyers are debating whether allowing a terminally ill patient to die amounts to culpable homicide (=a legal decision that someone was criminally guilty of the death ).
 someone who is guilty
 @@PHRASE0@@culprit
 @@DEFINE@@someone who has done something wrong, especially a crime
@@ -52535,7 +52534,7 @@ to feel ill
 @@EXAMPLE1@@Liz said she was feeling pretty rough yesterday -- I don't think she'll come to work today.
 @@PHRASE4@@feel sick
 @@VARIANT@@feel sick to your stomach
-@@DEFINE@@to feel as if you are going to vomit(=bring food up from your stomach)
+@@DEFINE@@to feel as if you are going to vomit (=bring food up from your stomach )
 @@EXAMPLE0@@We'd only been in the car two minutes when David said he felt sick.
 @@EXAMPLE1@@When I was pregnant, the smell of coffee made me feel sick to my stomach.
 @@PHRASE5@@groggy
@@ -52949,7 +52948,7 @@ an important person
 @@PHRASE3@@VIP
 @@DEFINE@@a very important, famous, or powerful person who is treated with special attention and respect
 @@EXAMPLE0@@The First Lady is expected to be among the many VIPs attending tonight.
-@@EXAMPLE1@@The pair had their meeting in the VIP lounge(=room for important people)at Heathrow airport.
+@@EXAMPLE1@@The pair had their meeting in the VIP lounge (=room for important people ) at Heathrow airport.
 @@PHRASE4@@prominent
 @@DEFINE@@important, well-known, and respected in politics, business, education etc
 @@EXAMPLE0@@Daguerre was a prominent Mexico City lawyer.
@@ -53756,7 +53755,7 @@ when numbers or amounts are increasing
 @@EXAMPLE1@@Le Shuttle competes with an ever-rising number of ferries for the busy Channel crossing.
 @@EXAMPLE2@@the rising rate of smoking among teenagers
 @@GLOSS@@when problems increase and become more serious
-@@EXAMPLE0@@We are entering a period of slow economic growth and rising unemployment.
+@@EXAMPLE3@@We are entering a period of slow economic growth and rising unemployment.
 @@PHRASE2@@growing
 @@DEFINE@@gradually increasing
 @@EXAMPLE0@@An economic miracle is needed if Bangladesh is to feed its huge and growing population.
@@ -53883,7 +53882,7 @@ to make a number or amount increase
 @@THESPROPFORM1@@increase something by 20%/$400/1 million etc
 @@EXAMPLE0@@a program to increase output by 14%
 @@PHRASE1@@raise
-@@DEFINE@@if someone raises raises a tax, price, temperature etc, they increase it
+@@DEFINE@@if someone raises a tax, price, temperature etc, they increase it
 @@EXAMPLE0@@The president should take the necessary steps of raising taxes and cutting public spending.
 @@EXAMPLE1@@All the major airlines have raised their fares.
 @@THESPROPFORM0@@raise something to $300/40C/200 etc
@@ -58904,7 +58903,7 @@ coming at the end after all others
 @@GLOSS@@use this to emphasize that something is last
 @@EXAMPLE0@@The very last train leaves at 1.00 a.m.
 @@THESPROPFORM1@@the last time
-@@EXAMPLE0@@That was the last time I ever saw her.(=I never saw her again)
+@@EXAMPLE0@@That was the last time I ever saw her. (=I never saw her again )
 @@THESPROPFORM2@@last chance
 @@EXAMPLE0@@Today is your last chance to visit the fashion show, which ends this evening.
 @@THESPROPFORM3@@the last
@@ -59963,7 +59962,7 @@ the smallest amount or number of something
 @@EXAMPLE0@@We decided to buy the one that cost the least.
 @@EXAMPLE1@@Those who have been in the most danger have the least to say about it.
 @@EXAMPLE2@@Of all the EU countries, Britain spends the least on higher education.
-@@EXAMPLE3@@The least I would expect would be an apology(=I'd like more than just an apology).
+@@EXAMPLE3@@The least I would expect would be an apology (=I'd like more than just an apology ).
 @@THESPROPFORM1@@the least water/money/time etc
 @@EXAMPLE0@@After trials, we chose the engine that used the least fuel.
 @@EXAMPLE1@@I was the youngest, so I always got the least pocket money.
@@ -61048,7 +61047,7 @@ to let someone do something
 @@EXAMPLE0@@They said they had no objection to us leaving a little early.
 @@PHRASE7@@give your consent
 @@DEFINE@@to give final permission to allow something important to happen, which will affect yourself, your family, or your property
-@@EXAMPLE0@@Parents are required to give their written consent(=give permission in writing)before a child can be asked to participate in an interview.
+@@EXAMPLE0@@Parents are required to give their written consent (=give permission in writing ) before a child can be asked to participate in an interview.
 @@THESPROPFORM0@@give your consent to something
 @@EXAMPLE0@@In September, he gave Dr. Arning his consent to conduct the experiment.
 @@PHRASE8@@give somebody/something the go-ahead
@@ -61754,7 +61753,7 @@ to lift a person or thing
 @@EXAMPLE0@@The bridge can be raised to allow ships to pass under it.
 @@EXAMPLE1@@"Cheers, everyone!" said Larry, raising his glass.
 @@PHRASE4@@scoop up/out
-@@DEFINE@@to dig or pick something up with a scoop(=a round deep spoon), a spoon, or with your curved hand
+@@DEFINE@@to dig or pick something up with a scoop (=a round deep spoon ), a spoon, or with your curved hand
 @@THESPROPFORM0@@scoop something up/out/off etc
 @@EXAMPLE0@@He scooped up a handful of sand and dropped it in the bucket.
 @@EXAMPLE1@@Slice the eggs in half, then scoop out the yolks into a bowl.
@@ -64613,9 +64612,9 @@ someone who is paid to look after children
 @@EXAMPLE0@@I'll come with you if I can get a babysitter for Friday.
 @@EXAMPLE1@@I guess we should have some snacks around for the sitter.
 @@PHRASE1@@childminder
-@@VARIANT@@babysitterorsitter
+@@VARIANT@@babysitter or sitter
 @@DEFINE@@someone who is paid to look after children while their parents are at work
-@@EXAMPLE0@@Sheila's setting up in business as a registered childminder(=on a special list of childminders that have been approved by the authorities).
+@@EXAMPLE0@@Sheila's setting up in business as a registered childminder (=on a special list of childminders that have been approved by the authorities ).
 @@EXAMPLE1@@I asked my childminder to do what I do when Laura is naughty.
 @@PHRASE2@@nanny
 @@DEFINE@@a woman who is paid to look after someone else's children, and who sometimes lives in the house with the family
@@ -65070,7 +65069,7 @@ to lose a game, argument, election, war etc
 @@EXAMPLE0@@I always lose when I play tennis with my sister.
 @@THESPROPFORM0@@lose a game/fight/election etc
 @@EXAMPLE0@@Everyone expected the Democrats to lose the election.
-@@EXAMPLE1@@The Chicago Bears lost their eighth game in a row(=they lost eight games, one after the other).
+@@EXAMPLE1@@The Chicago Bears lost their eighth game in a row (=they lost eight games, one after the other ).
 @@THESPROPFORM1@@lose to
 @@EXAMPLE0@@England lost to Brazil in the final.
 @@EXAMPLE1@@He lost his title unexpectedly to a man who is virtually unknown outside boxing circles.
@@ -66115,7 +66114,7 @@ not high or not far off the ground
 @@EXAMPLE0@@Low-lying land in river valleys is often subject to flooding.
 @@EXAMPLE1@@Experts are predicting that the sea level will rise, flooding many low-lying areas.
 @@PHRASE2@@low-rise
-@@DEFINE@@low-rise buildings are only one or two floors(=levels)high
+@@DEFINE@@low-rise buildings are only one or two floors (=levels ) high
 @@EXAMPLE0@@There are many advantages to low-rise buildings.
 @@EXAMPLE1@@traditional, low-rise housing
 a low sound/voice etc
@@ -66239,7 +66238,7 @@ a lucky person
 @@THESPROPFORM1@@lucky (that)
 @@EXAMPLE0@@Arthur left the front door unlocked - we're lucky that nothing was stolen.
 @@THESPROPFORM2@@lucky with
-@@EXAMPLE0@@Apart from the sprained ankle, I've been very lucky with injuries(=I haven't had many).
+@@EXAMPLE0@@Apart from the sprained ankle, I've been very lucky with injuries (=I haven't had many ).
 @@THESPROPFORM3@@think/count yourself lucky
 @@GLOSS@@used to say that someone should consider themselves lucky
 @@EXAMPLE0@@He should count himself lucky not to have been blamed for the whole fiasco.
@@ -66925,7 +66924,7 @@ to make fun of someone by saying the opposite of what you mean
 @@PHRASE1@@sarcasm
 @@DEFINE@@remarks that make fun of someone, because you say the opposite of what you really mean
 @@EXAMPLE0@@Susie found his sarcasm very hurtful, but she didn't reply.
-@@EXAMPLE1@@"Oh, please don't apologize," said Molly, her voice dripping with sarcasm(=in a very sarcastic voice).
+@@EXAMPLE1@@"Oh, please don't apologize," said Molly, her voice dripping with sarcasm (=in a very sarcastic voice ).
 @@THESPROPFORM0@@heavy sarcasm
 @@EXAMPLE0@@"How generous of you," he drawled with heavy sarcasm.
 @@THESPROPFORM1@@a note of sarcasm
@@ -68940,14 +68939,13 @@ your mind
 @@PHRASE0@@mind
 @@DEFINE@@what you use to think and imagine things
 @@EXAMPLE0@@His mind was full of big ideas for developing the company.
-@@EXAMPLE1@@Dave struggled hard to push these worries out of his mind.(=try not to think about them)
+@@EXAMPLE1@@Dave struggled hard to push these worries out of his mind. (=try not to think about them )
 @@THESPROPFORM0@@in your mind
 @@EXAMPLE0@@She had a picture of him in her mind - tall, blond and handsome.
 @@THESPROPFORM1@@at the back of your mind
 @@GLOSS@@when an idea is not very clear or certain
 @@EXAMPLE0@@At the back of my mind I had the funny feeling that I'd met her somewhere before.
 @@THESPROPFORM2@@go/run through your mind
-@@GLOSS@@
 @@EXAMPLE0@@The same thoughts kept going through my mind and I couldn't get to sleep.
 @@THESPROPFORM3@@turn something over in your mind
 @@GLOSS@@think about something carefully
@@ -69602,7 +69600,7 @@ money in the form of coins or notes
 @@PHRASE2@@change
 @@DEFINE@@money in the form of coins, or the money you get back when you pay for something with more money than it cost
 @@EXAMPLE0@@I hope you've got some change for the bus, because I haven't.
-@@EXAMPLE1@@Check your change(=make sure you have been given the right amount)before leaving the shop.
+@@EXAMPLE1@@Check your change (=make sure you have been given the right amount ) before leaving the shop.
 @@THESPROPFORM0@@loose change
 @@EXAMPLE0@@I've got £20 and a bit of loose change as well.
 @@THESPROPFORM1@@small change
@@ -69669,7 +69667,7 @@ an amount of money
 @@EXAMPLE0@@Stars like Chaplin earned $2000 a week, which was an enormous sum in those days.
 @@EXAMPLE1@@Apple has spent huge sums in its drive to penetrate new markets.
 @@EXAMPLE2@@She puts away small sums of money when she can afford to.
-@@EXAMPLE3@@The store chain has been forced to pay hefty sums(=a very large amount)to female employees after it was sued for discrimination.
+@@EXAMPLE3@@The store chain has been forced to pay hefty sums (=a very large amount ) to female employees after it was sued for discrimination.
 @@THESPROPFORM3@@lump sum
 @@GLOSS@@an amount of money given in a single payment
 @@EXAMPLE0@@You can receive your bonus in monthly instalments, or as a lump sum.
@@ -69758,11 +69756,11 @@ all the money that a person, company etc has
 @@THESPROPFORM1@@beyond your means
 @@GLOSS@@costing more than you can afford
 @@EXAMPLE0@@I think private schooling would be well beyond our means.
-@@EXAMPLE1@@She's been living beyond her means(=spending more than she can really afford to), and now the debts have caught her up.
+@@EXAMPLE1@@She's been living beyond her means (=spending more than she can really afford to ), and now the debts have caught her up.
 @@THESPROPFORM2@@within your means
 @@GLOSS@@not costing more than you can afford
 @@EXAMPLE0@@She was required to pay a $500 fee, which appeared to be within her means.
-@@EXAMPLE1@@Money isn't a problem. We simply live within our means(=do not spend more than we can afford to).
+@@EXAMPLE1@@Money isn't a problem. We simply live within our means (=do not spend more than we can afford to ).
 @@THESPROPFORM3@@private/independent means
 @@GLOSS@@money that someone has from property, investments etc rather than earning it by working
 @@EXAMPLE0@@He's given up his lecturing job, but he does have private means.
@@ -70483,7 +70481,7 @@ to be more than a particular number or amount
 @@EXAMPLE0@@Metcalf has achieved 49 touchdowns, far exceeding even those of his famous father.
 @@PHRASE2@@outnumber
 @@DEFINE@@if one type of person or thing outnumbers another, there are more of the first type than of the second
-@@EXAMPLE0@@Women teachers outnumber their male colleagues by two to one.(=there are twice as many women)
+@@EXAMPLE0@@Women teachers outnumber their male colleagues by two to one. (=there are twice as many women )
 @@THESPROPFORM0@@greatly/far outnumber
 @@EXAMPLE0@@a city where bicycles greatly outnumber cars
 @@PHRASE3@@be up
@@ -71154,7 +71152,7 @@ music
 @@EXAMPLE0@@The song has a simple melody and beautiful lyrics.
 @@EXAMPLE1@@Melody is not the central element in Martino's compositions - rhythm is more important.
 @@PHRASE5@@harmony
-@@DEFINE@@the chords or lines of music that accompany(=support)the melody
+@@DEFINE@@the chords or lines of music that accompany (=support ) the melody
 @@EXAMPLE0@@The harmonies in her symphonies are wonderfully rich.
 @@EXAMPLE1@@All first year music students are required to take a class in harmony.
 @@PHRASE6@@rhythm
@@ -71352,7 +71350,7 @@ when a rule or law forces you to do something
 @@PHRASE4@@compulsory
 @@DEFINE@@something that is compulsory must be done, used, or provided because of a rule or law
 @@EXAMPLE0@@Smoke detectors are compulsory in all new buildings.
-@@EXAMPLE1@@Compulsory education(=when all children have to go to school)was introduced in 1870.
+@@EXAMPLE1@@Compulsory education (=when all children have to go to school ) was introduced in 1870.
 @@THESPROPFORM0@@compulsory for
 @@EXAMPLE0@@Maths and English are compulsory for all students.
 @@THESPROPFORM1@@it is compulsory (for somebody) to do something
@@ -71565,7 +71563,7 @@ a person's name
 @@EXAMPLE1@@Smith is the most common English surname.
 @@PHRASE5@@maiden name
 @@DEFINE@@the surname that a woman had before she was married
-@@EXAMPLE0@@My mother kept her maiden name when she got married.(=did not change her name to her husband's name)
+@@EXAMPLE0@@My mother kept her maiden name when she got married. (=did not change her name to her husband's name )
 @@PHRASE6@@family name
 @@DEFINE@@the name that is shared by all the members of the same family
 @@EXAMPLE0@@Joseph Conrad's original family name was Korzeniowski.
@@ -72556,7 +72554,7 @@ never
 @@EXAMPLE2@@The view was spectacular - I'll never forget it.
 @@EXAMPLE3@@He walks right past me and never even says "hello".
 @@THESPROPFORM0@@never do/say etc something
-@@EXAMPLE0@@(=used to tell someone not to do something)Never go there alone at night.
+@@EXAMPLE0@@(=used to tell someone not to do something ) Never go there alone at night.
 @@THESPROPFORM1@@never have I/did he etc
 @@GLOSS@@used for emphasis
 @@EXAMPLE0@@Never in my whole life have I felt so angry.
@@ -74250,7 +74248,7 @@ a written number
 @@EXAMPLE0@@Temperatures reached double figures for the first time this spring, going as high as 14 degrees.
 @@THESPROPFORM1@@single figures
 @@GLOSS@@less than 10
-@@EXAMPLE0@@The inflation rate was still in single figures.(=less than 10%)
+@@EXAMPLE0@@The inflation rate was still in single figures. (=less than 10% )
 @@THESPROPFORM2@@five-figure/six-figure etc
 @@GLOSS@@a number that has five, six etc figures in it
 @@EXAMPLE0@@The managing director earns a six-figure salary.
@@ -75597,7 +75595,7 @@ only one, or only a small number
 @@DEFINE@@the only person, thing etc, especially when you would expect there to be more or expect it to be different
 @@EXAMPLE0@@Everyone ignored my sole contribution to the conversation.
 @@THESPROPFORM0@@the sole person/thing etc
-@@EXAMPLE0@@In many households, the woman is the sole breadwinner(=the only person who has a job).
+@@EXAMPLE0@@In many households, the woman is the sole breadwinner (=the only person who has a job ).
 @@THESPROPFORM1@@with the sole intention/objective/aim of doing something
 @@EXAMPLE0@@I think he came here with the sole intention of causing trouble.
 @@THESPROPFORM2@@somebody's sole concern/objective etc
@@ -76225,11 +76223,11 @@ someone or something that is completely different from someone or something else
 @@PHRASE2@@the other way around
 @@VARIANT@@round
 @@DEFINE@@the opposite of what you thought or of what someone has just said
-@@EXAMPLE0@@No, the street was named after the college, not the other way around(=the college was not named after the street).
+@@EXAMPLE0@@No, the street was named after the college, not the other way around (=the college was not named after the street ).
 @@EXAMPLE1@@I thought he was the boss and she was his secretary, but in fact it was the other way around.
 @@PHRASE3@@vice versa
 @@DEFINE@@used to talk about the opposite of a situation that you have just mentioned
-@@EXAMPLE0@@Whenever I'm at home, my husband seems to be out, and vice versa(=when I am out, he's at home)!
+@@EXAMPLE0@@Whenever I'm at home, my husband seems to be out, and vice versa (=when I am out, he's at home ) !
 @@EXAMPLE1@@Astronomers were still uncertain whether the Earth travelled around the Sun or vice-versa.
 @@EXAMPLE2@@Dutch speakers can usually understand German quite well, but not vice versa.
 @@PHRASE4@@go to the opposite extreme/go from one extreme to the other
@@ -77030,7 +77028,7 @@ when someone owns something
 @@DEFINE@@if something is mine/yours/John's etc , it belongs to me, you, John etc
 @@EXAMPLE0@@"Hey, that's my pen!" - "Sorry! I didn't know it was yours."
 @@EXAMPLE1@@"Whose bike is that?" "It's Martin's."
-@@EXAMPLE2@@The money wasn't Sara's to lend you in the first place(=Sara didn't have the right to lend it).
+@@EXAMPLE2@@The money wasn't Sara's to lend you in the first place (=Sara didn't have the right to lend it ).
 @@PHRASE3@@my/your/his etc
 @@DEFINE@@belonging to me, you, him etc
 @@EXAMPLE0@@Please can you move your car? It's blocking my driveway.
@@ -77137,7 +77135,8 @@ pain
 @@THESPROPFORM2@@ease the pain
 @@GLOSS@@make you feel less pain
 @@EXAMPLE0@@The drug is often used to ease the pain of dying cancer patients.
-@@THESPROPFORM3@@labor pains (American) / labour pains (British)
+@@THESPROPFORM3@@labor pains
+@@VARIANT@@labour pains
 @@GLOSS@@before giving birth
 @@EXAMPLE0@@Kerry had to drive herself to the hospital when the labor pains began.
 @@PHRASE1@@ache
@@ -77402,7 +77401,7 @@ part of a total amount or number
 @@DEFINE@@a small part of an amount or number, especially a very small part
 @@THESPROPFORM0@@fraction of
 @@EXAMPLE0@@Employees' salaries are just a fraction of the total cost of the project.
-@@EXAMPLE1@@Faxes are expensive, when you consider you can send emails at a fraction of the cost(=for very much less money).
+@@EXAMPLE1@@Faxes are expensive, when you consider you can send emails at a fraction of the cost (=for very much less money ).
 @@THESPROPFORM1@@small/tiny fraction
 @@EXAMPLE0@@a problem that affects only a small fraction of the total population
 @@PHRASE2@@percentage
@@ -77509,7 +77508,7 @@ part of an organization
 @@DEFINE@@a part of an area of economic activity, such as industry or trade
 @@THESPROPFORM0@@manufacturing/business/retail etc sector
 @@EXAMPLE0@@The growth in the number of home computers has boosted the electronics sector.
-@@EXAMPLE1@@The new sales tax caused problems for the retail sector(=the shops and stores that sell goods to the public).
+@@EXAMPLE1@@The new sales tax caused problems for the retail sector (=the shops and stores that sell goods to the public ).
 @@THESPROPFORM1@@public sector
 @@GLOSS@@organizations that the government owns
 @@EXAMPLE0@@The main source of work here is public sector employment.
@@ -78152,7 +78151,7 @@ to pay for something
 @@PHRASE1@@meet the cost of
 @@DEFINE@@if a company or organization meets the cost of something, it pays for it for someone else, especially when they do not have a legal duty to do this
 @@EXAMPLE0@@We will meet the cost of any expenses you may incur when travelling to your interview.
-@@THESPROPFORM0@@meet the cost of of doing something
+@@THESPROPFORM0@@meet the cost of doing something
 @@EXAMPLE0@@A local firm has agreed to meet the cost of sending ten lucky prize-winners on a dream holiday.
 @@PHRASE2@@foot the bill
 @@DEFINE@@to pay for something for someone else, especially when you do not want to or do not think that you should
@@ -79167,7 +79166,7 @@ all the people in a particular area, city, country etc
 @@PHRASE4@@Londoners/New Yorkers/Parisians etc
 @@DEFINE@@people who live in London, New York, Paris etc
 @@EXAMPLE0@@For most New Yorkers, life will never be the same again.
-@@EXAMPLE1@@The Milanese(=people from Milan)elected a new mayor yesterday.
+@@EXAMPLE1@@The Milanese (=people from Milan ) elected a new mayor yesterday.
 a person in a story
 @@PHRASE0@@character
 @@DEFINE@@a person in a story in a book, film, or play
@@ -80144,7 +80143,7 @@ a plan to do something
 @@EXAMPLE0@@It is not our policy to reveal our clients' names.
 @@THESPROPFORM0@@environmental/monetary/economic etc policy
 @@EXAMPLE0@@Most large companies these days operate an equal opportunities policy.
-@@EXAMPLE1@@US foreign policy(=towards other countries)
+@@EXAMPLE1@@US foreign policy (=towards other countries )
 @@THESPROPFORM1@@policy on
 @@EXAMPLE0@@the government's policy on Europe
 @@THESPROPFORM2@@policy towards
@@ -80839,7 +80838,7 @@ the people in a society who are poor
 @@PHRASE1@@the have-nots
 @@DEFINE@@the people in society who are poor and have very few possessions compared to people who have a high income and own property, cars etc
 @@THESPROPFORM0@@the haves and have-nots
-@@EXAMPLE0@@Society seems to be increasingly divided into the haves(=rich people)and have-nots.
+@@EXAMPLE0@@Society seems to be increasingly divided into the haves (=rich people ) and have-nots.
 when people have very little money
 @@PHRASE0@@poverty
 @@EXAMPLE0@@Charles was shocked by the poverty he saw in India.
@@ -81006,7 +81005,7 @@ to be in a high position in an organization, company, or list
 @@EXAMPLE1@@The reporter's sources were apparently high up in the government.
 @@PHRASE1@@be high in/on
 @@DEFINE@@to have a high position in a list or table of the most successful or best teams, records etc
-@@THESPROPFORM0@@be high in/on on
+@@THESPROPFORM0@@be high in/on
 @@EXAMPLE0@@Pele is high on the list of the world's best footballers.
 @@THESPROPFORM1@@be high in
 @@EXAMPLE0@@U2's new record is high in the charts.
@@ -82336,7 +82335,7 @@ to push something firmly, especially with your fingers
 @@DEFINE@@to press a button, for example on a telephone or a computer screen, in order to make a choice, get information, or make something work - used especially in instructions
 @@EXAMPLE0@@For room service, touch button 9.
 @@PHRASE4@@knead
-@@DEFINE@@to press a soft substance such as clay or dough(=a mixture of flour and water used to make bread)repeatedly with your hands
+@@DEFINE@@to press a soft substance such as clay or dough (=a mixture of flour and water used to make bread ) repeatedly with your hands
 @@EXAMPLE0@@She kneaded the dough and shaped it into loaves.
 @@EXAMPLE1@@The clay should be kneaded thoroughly to remove any bubbles of air.
 to press something so that it becomes flatter or smaller
@@ -84043,7 +84042,7 @@ to promise something
 @@PHRASE6@@commit to
 @@DEFINE@@to promise to do something that will take a long time or involve a lot of effort
 @@EXAMPLE0@@Young people still need to learn how to commit to a job and have goals for themselves.
-@@THESPROPFORM0@@commit to to do something
+@@THESPROPFORM0@@commit to do something
 @@EXAMPLE0@@The organization needs volunteers who can commit to work four hours a week.
 @@PHRASE7@@pledge
 @@DEFINE@@to publicly or officially promise to give help, support, or money to an organization, group, or person
@@ -84849,7 +84848,7 @@ owned or paid for by the government
 @@EXAMPLE1@@public sector employees
 @@PHRASE1@@state
 @@DEFINE@@owned, controlled, or paid for by the government. In the US state usually refers to the government of a particular state , not the national government
-@@EXAMPLE0@@The government has promised increased spending on the the state education system.
+@@EXAMPLE0@@The government has promised increased spending on the state education system.
 @@EXAMPLE1@@China's state radio station
 @@EXAMPLE2@@Britain's state aid for industry generally falls far short of the sums seen in other countries.
 @@PHRASE2@@government
@@ -85842,18 +85841,18 @@ to put something in a liquid for a short time
 @@EXAMPLE1@@My daughter likes to dunk her biscuits in my tea.
 to put paint, glue, make-up etc onto a surface
 @@PHRASE0@@put on
-@@DEFINE@@to put something such a paint or glue onto a surface, or make-up(=powders and colours that women put on their faces)onto your face
+@@DEFINE@@to put something such a paint or glue onto a surface, or make-up (=powders and colours that women put on their faces ) onto your face
 @@THESPROPFORM0@@put something on
 @@EXAMPLE0@@The paint had been put on too thickly, and it had dripped.
 @@THESPROPFORM1@@put on something
 @@EXAMPLE0@@When you put the glue on, be careful not to get any on your fingers.
 @@EXAMPLE1@@Patricia went upstairs to put on some lipstick.
 @@PHRASE1@@apply
-@@DEFINE@@to put something such as paint or glue onto a surface, or make-up(=powders and colours that women put on their faces)onto your face - used especially in written instructions on how to use it
+@@DEFINE@@to put something such as paint or glue onto a surface, or make-up (=powders and colours that women put on their faces ) onto your face - used especially in written instructions on how to use it
 @@EXAMPLE0@@Apply the cream in the morning and the evening.
 @@EXAMPLE1@@Make sure the surface is completely dry before applying the final coat of paint.
 @@PHRASE2@@slap on
-@@DEFINE@@to put something such as paint or glue onto a surface, or make-up(=powders and colours that women put on their faces)onto your face quickly and without much care, and usually in large amounts
+@@DEFINE@@to put something such as paint or glue onto a surface, or make-up (=powders and colours that women put on their faces ) onto your face quickly and without much care, and usually in large amounts
 @@THESPROPFORM0@@slap something on
 @@EXAMPLE0@@Mike was slapping jam on a slice of bread.
 @@THESPROPFORM1@@slap on something
@@ -86724,7 +86723,7 @@ able to read
 @@EXAMPLE1@@Good readers tend to be better at spelling than other children.
 @@PHRASE3@@literacy
 @@DEFINE@@the fact of being able to read - use this especially to talk about how many people in a society can read and in educational contexts
-@@EXAMPLE0@@Cuba has one of the highest literacy rates in the world(=more people can read there than anywhere else in the world)).
+@@EXAMPLE0@@Cuba has one of the highest literacy rates in the world (=more people can read there than anywhere else in the world) ).
 @@EXAMPLE1@@Literacy levels amongst girls very quickly overtook those of boys.
 @@EXAMPLE2@@She runs a project called 'Forward to Literary'.
 @@EXAMPLE3@@special classes in basic skills such as literacy and numeracy
@@ -86885,7 +86884,7 @@ ready to be used or eaten
 @@THESPROPFORM0@@ready to eat/collect/use etc
 @@EXAMPLE0@@Your suit will be ready to pick up on Wednesday.
 @@EXAMPLE1@@In a year's time, the wine will be ready to drink.
-@@EXAMPLE2@@I tend to buy a lot of meals that are ready to eat(=they have already been cooked).
+@@EXAMPLE2@@I tend to buy a lot of meals that are ready to eat (=they have already been cooked ).
 @@THESPROPFORM1@@ready for
 @@EXAMPLE0@@Is everything ready for the party?
 @@THESPROPFORM2@@get something ready
@@ -88289,7 +88288,7 @@ a reduction in number, prices, levels etc
 @@PHRASE1@@decrease
 @@DEFINE@@when something happens less than it used to
 @@THESPROPFORM0@@decrease in
-@@EXAMPLE0@@There has been a 15% decrease in violent crime(=it has gone down by 15%).
+@@EXAMPLE0@@There has been a 15% decrease in violent crime (=it has gone down by 15% ).
 @@THESPROPFORM1@@a significant/marked decrease
 @@EXAMPLE0@@In the last five years there has been a significant decrease in the number of deaths from heart disease.
 @@PHRASE2@@drop/fall
@@ -88369,7 +88368,7 @@ to say that you will not do something
 @@PHRASE2@@say no
 @@DEFINE@@to tell someone that you will not do what they asked you to do
 @@EXAMPLE0@@I asked Dad to lend me some money, but he said no.
-@@THESPROPFORM0@@say no no
+@@THESPROPFORM0@@say no
 @@EXAMPLE0@@They asked me so nicely, I couldn't really say no to them.
 @@PHRASE3@@will not/won't
 @@DEFINE@@if someone will not or won't do something that they have been asked to do or told to do, they are determined not to do it
@@ -89470,7 +89469,7 @@ to remember someone or something from the past
 @@DEFINE@@something that you remember from the past about a person, place, or experience
 @@EXAMPLE0@@This place holds lots of memories for us.
 @@EXAMPLE1@@Now, his experiences were just a painful memory.
-@@EXAMPLE2@@We had to write a story about our earliest memory(=the first event you can remember in your life).
+@@EXAMPLE2@@We had to write a story about our earliest memory (=the first event you can remember in your life ).
 @@THESPROPFORM0@@memory of
 @@EXAMPLE0@@I have lots of happy memories of my time in Japan.
 @@THESPROPFORM1@@bring back memories
@@ -90975,7 +90974,7 @@ when one thing happens because of another
 @@EXAMPLE0@@My mother always said that no good would come of the relationship.
 @@PHRASE4@@stem from
 @@DEFINE@@if something, especially a problem, stems from something else, it develops because of it and is directly connected with it
-@@THESPROPFORM0@@stem from from (doing) something
+@@THESPROPFORM0@@stem from (doing) something
 @@EXAMPLE0@@Many of my patients' anxieties stem from experiences in their childhood.
 @@EXAMPLE1@@The dog's aggression stemmed from being kept locked up all day.
 @@THESPROPFORM1@@stem from the fact that
@@ -91885,7 +91884,7 @@ when you are in a situation where there are risks
 @@EXAMPLE0@@He has left himself open to charges of racism.
 @@EXAMPLE1@@Any journalist who writes a story without checking his facts is simply laying himself open to criticism.
 @@PHRASE6@@be on dangerous ground/in dangerous territory
-@@DEFINE@@to talk about a particular subject when there is a risk that you may offend, annoy, or or upset someone
+@@DEFINE@@to talk about a particular subject when there is a risk that you may offend, annoy, or upset someone
 @@EXAMPLE0@@A boss who puts his arm around an employee is on dangerous ground and could risk charges of harassment.
 @@EXAMPLE1@@I realized I was in dangerous territory, and steered the conversation away from his business interests.
 in a situation where there are risks
@@ -96520,7 +96519,7 @@ a series of events, things, numbers, people etc
 @@EXAMPLE1@@The book details the train of events that led to the outbreak of the First World War.
 @@PHRASE5@@stream of
 @@DEFINE@@a long and almost continuous series of events, people, objects etc that follow closely after each other
-@@THESPROPFORM0@@stream of of
+@@THESPROPFORM0@@stream of
 @@EXAMPLE0@@Guides take the non-stop stream of visitors around the castle.
 @@THESPROPFORM1@@in an endless stream
 @@GLOSS@@continuously, in large numbers
@@ -97542,7 +97541,7 @@ to use something with another person
 @@THESPROPFORM0@@share something with somebody
 @@EXAMPLE0@@You could share a taxi with me if you like.
 @@THESPROPFORM1@@share with
-@@EXAMPLE0@@If two adults share with two children under 16(=share a room), the children stay free.
+@@EXAMPLE0@@If two adults share with two children under 16 (=share a room ), the children stay free.
 @@PHRASE1@@pool
 @@THESPROPFORM0@@pool your ideas/money/resources etc
 @@DEFINE@@if people pool their ideas etc, they put them together so that everyone can use them and gain from them
@@ -98682,7 +98681,7 @@ when you should do something because it is your duty or is right
 @@PHRASE1@@ought to
 @@DEFINE@@use this to say that someone should do something because you think that it is right or that it is the best thing to do
 @@EXAMPLE0@@"Do you think we should tell him?" "Well, we ought to really."
-@@THESPROPFORM0@@ought to to do something
+@@THESPROPFORM0@@ought to do something
 @@EXAMPLE0@@You ought to go to church more often.
 @@EXAMPLE1@@Do you think we ought to call the police?
 @@EXAMPLE2@@The Government ought to spend more on education.
@@ -101565,7 +101564,7 @@ to smile
 @@DEFINE@@to make your mouth curve upwards, as a sign that you are happy or amused or that you want to be friendly
 @@EXAMPLE0@@She smiled and said, "Good morning."
 @@EXAMPLE1@@Kathy couldn't help smiling as the children came back into the room.
-@@EXAMPLE2@@'Stop worrying, you look very nice,' she smiled reassuringly.(=said with a smile)
+@@EXAMPLE2@@'Stop worrying, you look very nice,' she smiled reassuringly. (=said with a smile )
 @@EXAMPLE3@@My father rarely smiled.
 @@THESPROPFORM0@@smile at
 @@EXAMPLE0@@The twins turned and smiled at each other, sharing a private joke.
@@ -101578,7 +101577,7 @@ to smile
 @@PHRASE1@@grin
 @@DEFINE@@to give a big happy smile
 @@EXAMPLE0@@Grinning shyly, he offered her a drink.
-@@EXAMPLE1@@'I've been a complete idiot', grinned Ian.(=said with a grin)
+@@EXAMPLE1@@'I've been a complete idiot', grinned Ian. (=said with a grin )
 @@THESPROPFORM0@@grin broadly
 @@GLOSS@@grin with your mouth very wide
 @@EXAMPLE0@@She sat back down again, grinning broadly.
@@ -101615,7 +101614,7 @@ to smile in an unpleasant way
 @@PHRASE0@@smirk
 @@DEFINE@@to smile in an unpleasant way, for example because you are pleased about someone else's bad luck or because you know something that they do not know
 @@EXAMPLE0@@She sits there smirking as if she's the only one who knows the answer.
-@@EXAMPLE1@@'You realise you'll be stuck out here on your own, don't you?' he smirked.(=said with a smirk)
+@@EXAMPLE1@@'You realise you'll be stuck out here on your own, don't you?' he smirked. (=said with a smirk )
 @@THESPROPFORM0@@smirk at
 @@EXAMPLE0@@What are you smirking at?
 @@PHRASE1@@leer
@@ -102968,7 +102967,7 @@ not able to speak
 @@EXAMPLE0@@A stroke left her mute and unable to use her legs.
 @@PHRASE3@@dumb
 @@DEFINE@@permanently unable to speak because of a physical condition - many people now consider this word to be offensive
-@@EXAMPLE0@@According to the story, he was struck dumb(=made dumb)by the gods.
+@@EXAMPLE0@@According to the story, he was struck dumb (=made dumb ) by the gods.
 @@EXAMPLE1@@She was born deaf and dumb.
 @@PHRASE4@@be at a loss for words/be lost for words
 @@DEFINE@@to be unable to say anything because you are very surprised, upset etc
@@ -103218,7 +103217,7 @@ someone who spends a lot of money carelessly
 @@EXAMPLE0@@$400 on a dress! That's a bit extravagant, isn't it?
 @@EXAMPLE1@@Rich and extravagant parents are spending more and more money on their children's parties.
 @@PHRASE1@@spendthrift
-@@DEFINE@@someone who spends money carelessly even when they know that they do cannot afford to
+@@DEFINE@@someone who spends money carelessly even when they know that they cannot afford to
 @@EXAMPLE0@@I remember him as a charming but irresponsible spendthrift.
 @@EXAMPLE1@@She was by no means a spendthrift, but somehow all the money disappeared anyway.
 @@PHRASE2@@big spender
@@ -104206,7 +104205,7 @@ to start doing something
 @@PHRASE0@@start
 @@EXAMPLE0@@We can't start until Carol gets here.
 @@EXAMPLE1@@I'm starting a new job next week.
-@@EXAMPLE2@@Have you started that book yet?(=started reading it)
+@@EXAMPLE2@@Have you started that book yet? (=started reading it )
 @@THESPROPFORM0@@start doing something
 @@EXAMPLE0@@I've just started learning German.
 @@EXAMPLE1@@It was getting dark so we started looking for a place to stay the night.
@@ -104225,7 +104224,7 @@ to start doing something
 @@PHRASE2@@get down to
 @@DEFINE@@to finally start doing something, especially work, after you have been avoiding doing it or after something has prevented you from doing it
 @@EXAMPLE0@@Come on Sam - it's time you got down to some homework.
-@@THESPROPFORM0@@get down to to doing something
+@@THESPROPFORM0@@get down to doing something
 @@EXAMPLE0@@When the summer comes, we must get down to painting the outside of the house.
 @@THESPROPFORM1@@get down to business
 @@EXAMPLE0@@OK, can everyone take a seat now, and we'll get down to business.
@@ -104251,7 +104250,7 @@ to start doing something
 @@PHRASE6@@settle down to
 @@DEFINE@@to start doing something after a delay or interruption that has stopped you giving it your full attention
 @@EXAMPLE0@@After lunch the children settled down to finish their science projects.
-@@THESPROPFORM0@@settle down to to doing something
+@@THESPROPFORM0@@settle down to doing something
 @@EXAMPLE0@@It was two o'clock before I could finally settle down to writing the next chapter.
 @@PHRASE7@@launch into
 @@DEFINE@@to suddenly start a long speech or story, especially if you are criticizing something or giving an entertaining description of something
@@ -104357,7 +104356,7 @@ to start doing something regularly
 @@PHRASE4@@get into the habit of
 @@DEFINE@@to start to do something so often that it becomes a habit
 @@EXAMPLE0@@I only used to have one or two cigarettes, but then I got into the habit of it.
-@@THESPROPFORM0@@get into the habit of of doing something
+@@THESPROPFORM0@@get into the habit of doing something
 @@EXAMPLE0@@Try to get into the habit of planning your work at the beginning of the day.
 to help or encourage someone to start doing something new
 @@PHRASE0@@introduce somebody to
@@ -105007,7 +105006,7 @@ when someone steals something
 @@EXAMPLE0@@Police have released a photo of a man they believe carried out a raid on a supermarket.
 @@PHRASE7@@job
 @@DEFINE@@a crime that involves stealing
-@@EXAMPLE0@@Her boyfriend was put in prison after a bank job(=theft from a bank).
+@@EXAMPLE0@@Her boyfriend was put in prison after a bank job (=theft from a bank ).
 @@THESPROPFORM0@@inside job
 @@GLOSS@@done by someone within the organization
 @@EXAMPLE0@@The police are convinced it was an inside job.
@@ -105292,7 +105291,7 @@ to stop a bad or unhealthy habit
 @@THESPROPFORM0@@stop doing something
 @@EXAMPLE0@@The health advice to people is simple - stop eating so much fat and eat more fruit and vegetables.
 @@PHRASE1@@quit
-@@DEFINE@@to stop doing something that that has been an unhealthy or harmful habit
+@@DEFINE@@to stop doing something that has been an unhealthy or harmful habit
 @@EXAMPLE0@@If you've smoked for a long time it can be very difficult to quit.
 @@THESPROPFORM0@@quit doing something
 @@EXAMPLE0@@They told me at the hospital to quit drinking for a while.
@@ -106637,7 +106636,7 @@ a strong feeling/belief
 @@DEFINE@@a deep feeling is one that you feel very strongly, especially a feeling of love, disappointment, or sympathy
 @@EXAMPLE0@@I have always had a deep affection for your family.
 @@EXAMPLE1@@The news came as a deep disappointment to us all.
-@@EXAMPLE2@@Please accept our deepest sympathies.(=used when someone has died)
+@@EXAMPLE2@@Please accept our deepest sympathies. (=used when someone has died )
 @@PHRASE5@@fervent
 @@DEFINE@@very strong and sincere
 @@EXAMPLE0@@Despite her troubled life she has always had a fervent belief in God.
@@ -111154,7 +111153,7 @@ when someone has good taste
 @@PHRASE1@@discerning
 @@DEFINE@@able to recognize things that are good or of high quality - use this especially when talking about buying things
 @@EXAMPLE0@@Discerning investors will find the guide useful.
-@@EXAMPLE1@@You don't have to be wealthy to develop a discerning palate.(=good taste in food)
+@@EXAMPLE1@@You don't have to be wealthy to develop a discerning palate. (=good taste in food )
 @@PHRASE2@@discriminating
 @@DEFINE@@able to judge what is of good quality and what is not, especially because you have a lot of knowledge or experience
 @@EXAMPLE0@@As film audiences get older, they will become more discriminating.
@@ -111640,7 +111639,7 @@ when you use the telephone in order to tell someone something
 @@EXAMPLE1@@Reservations can be made by telephone, but must be confirmed in writing within seven days.
 to end a telephone call
 @@PHRASE0@@hang up
-@@DEFINE@@to finish a telephone conversation or stop it before it has finished by putting down the receiver(=the part of a telephone you speak into)
+@@DEFINE@@to finish a telephone conversation or stop it before it has finished by putting down the receiver (=the part of a telephone you speak into )
 @@EXAMPLE0@@If a caller is rude, just hang up.
 @@THESPROPFORM0@@hang up the phone/receiver
 @@EXAMPLE0@@I said I'd be right there. I hung up the phone and grabbed my purse and car keys.
@@ -111648,7 +111647,7 @@ to end a telephone call
 @@GLOSS@@put the telephone down while someone is still talking
 @@EXAMPLE0@@Mitchell was furious and hung up on him.
 @@PHRASE1@@put the phone down
-@@DEFINE@@to put down the receiver(=the part of a telephone you speak into)after you have finished talking to someone
+@@DEFINE@@to put down the receiver (=the part of a telephone you speak into ) after you have finished talking to someone
 @@EXAMPLE0@@There was a long pause, and she was about to put the phone down when the voice came back again.
 @@PHRASE2@@slam the phone down/slam down the phone
 @@DEFINE@@to put the telephone down while someone is still speaking to you, because you are angry
@@ -111772,7 +111771,7 @@ when a programme is broadcast on television or radio
 @@DEFINE@@if a programme is on the air , it is being broadcast at that time, often at the same time that it is happening
 @@EXAMPLE0@@Someone called in while the programme was still on the air and identified the killer.
 @@EXAMPLE1@@Winfrey revealed on the air that she had been sexually abused as a child.
-@@EXAMPLE2@@The show was on the air for five years(=it was broadcast at a regular time for five years).
+@@EXAMPLE2@@The show was on the air for five years (=it was broadcast at a regular time for five years ).
 a television or radio programme
 @@PHRASE0@@programme
 @@VARIANT@@program
@@ -112220,7 +112219,7 @@ someone who gives information to the police
 @@EXAMPLE0@@How could he ever live with himself after being a stool pigeon?
 @@PHRASE4@@source
 @@DEFINE@@someone who gives information to the police, a newspaper etc, especially someone who does not want their name to be known
-@@EXAMPLE0@@It's the first duty of a journalist to protect his or her sources(=not say who they are).
+@@EXAMPLE0@@It's the first duty of a journalist to protect his or her sources (=not say who they are ).
 @@EXAMPLE1@@Our source informed us that there was a possibility of another attack the following week, possibly in the central London area.
 to tell someone something that was a secret
 @@PHRASE0@@tell
@@ -114912,7 +114911,7 @@ ways of saying what time it is
 @@DEFINE@@use this when the time is a little before or after a particular hour
 @@EXAMPLE0@@It's just before 6.
 @@EXAMPLE1@@It's just after 10 o'clock.
-@@EXAMPLE2@@It's just gone midnight.(=just after)
+@@EXAMPLE2@@It's just gone midnight. (=just after )
 @@PHRASE2@@to
 @@VARIANT@@of
 @@DEFINE@@use this to say that the time is a particular number of minutes before a particular hour
@@ -114949,7 +114948,7 @@ a time when something happens
 @@THESPROPFORM1@@the first/second/third etc time
 @@EXAMPLE0@@Is this the first time you've played pool?
 @@EXAMPLE1@@Sandra, that's the third time I've asked you to keep quiet.
-@@EXAMPLE2@@Alex won the 100 metres for the fifth time in a row(=he won five times, and no one else won the race in between).
+@@EXAMPLE2@@Alex won the 100 metres for the fifth time in a row (=he won five times, and no one else won the race in between ).
 @@THESPROPFORM2@@four/six/several etc times
 @@EXAMPLE0@@This is my favourite film - I've seen it five times.
 @@EXAMPLE1@@It's silly -- I've met him several times, but I can never remember his name.
@@ -115297,7 +115296,7 @@ a short time
 @@DEFINE@@a very short time
 @@EXAMPLE0@@Can I show you something? It'll only take a minute.
 @@EXAMPLE1@@Luke thought for a moment and then said: "Would you like to come too?"
-@@EXAMPLE2@@Can you turn that off a minute(=for a minute)?
+@@EXAMPLE2@@Can you turn that off a minute (=for a minute ) ?
 @@THESPROPFORM0@@in a minute/moment
 @@EXAMPLE0@@Yes, I'm coming in a moment.
 @@THESPROPFORM1@@a minute/moment ago
@@ -115600,7 +115599,7 @@ the right time or a good time to do something
 @@PHRASE2@@come at the right time/come at a good time
 @@DEFINE@@if something comes at the right time or comes at a good time , it happens when you need or want it to happen
 @@EXAMPLE0@@I lost my job last month, so this offer has come at just the right time.
-@@EXAMPLE1@@Well, you're news comes at a good time, Helen.
+@@EXAMPLE1@@Well, your news comes at a good time, Helen.
 @@PHRASE3@@be the time
 @@DEFINE@@an expression meaning to be the right time to do something important, use this especially when you are advising someone what they should do
 @@THESPROPFORM0@@be the time to do something
@@ -120030,7 +120029,7 @@ what you say when something is not important
 @@EXAMPLE0@@It makes no difference to me if you want to go.
 @@THESPROPFORM1@@it makes no difference/it doesn't make any difference to something
 @@EXAMPLE0@@You can have a single room or a double -- it makes no difference to the price.
-@@PHRASE2@@it's no big deal / it's not a big deal
+@@PHRASE2@@it's no big deal/it's not a big deal
 @@DEFINE@@say this when you do not think something is important or worrying, even though other people may think it is
 @@EXAMPLE0@@My leg's a little sore, but it's no big deal.
 @@EXAMPLE1@@Just copy your work onto a disk - it's no big deal.
@@ -123428,7 +123427,7 @@ when someone is waiting for something to happen
 @@DEFINE@@to wait happily or excitedly for something that is going to happen
 @@EXAMPLE0@@I'm really looking forward to this trip to Japan.
 @@EXAMPLE1@@We used to look forward to the weekends because that was when we could spend some time together.
-@@THESPROPFORM0@@look forward to to doing something
+@@THESPROPFORM0@@look forward to doing something
 @@EXAMPLE0@@I look forward to meeting you next month.
 @@PHRASE3@@can't wait
 @@DEFINE@@if you say you can't wait , you mean you feel excited and impatient because something good is going to happen and you want it to happen as soon as possible
@@ -124439,7 +124438,7 @@ someone who is keen to start a war
 @@PHRASE2@@hawk
 @@DEFINE@@a person, especially a politician, who supports the use of military force and strong action in order to settle arguments with other countries
 @@EXAMPLE0@@The hawks in the government would never permit any talks with the enemy.
-@@EXAMPLE1@@We don't yet know whether the new President is a hawk or a dove(=someone who prefers peaceful methods).
+@@EXAMPLE1@@We don't yet know whether the new President is a hawk or a dove (=someone who prefers peaceful methods ).
 to warn someone about something
 @@PHRASE0@@warn
 @@DEFINE@@to tell someone about something unpleasant or dangerous that might happen, so that they can avoid it or prevent it
@@ -124650,7 +124649,7 @@ to wash your hands/face/body etc
 @@DEFINE@@to clean your skin, especially using a special liquid cream
 @@EXAMPLE0@@This lotion cleanses your skin deep down, while preserving its natural pH balance.
 @@PHRASE8@@shampoo
-@@DEFINE@@to wash your hair with shampoo(=a special liquid soap for washing hair)
+@@DEFINE@@to wash your hair with shampoo (=a special liquid soap for washing hair )
 @@EXAMPLE0@@It's a new conditioner. Simply shampoo your hair, towel dry, and spray it in.
 to wash in a bath or shower
 @@PHRASE0@@have a shower
@@ -125083,7 +125082,7 @@ living in water
 @@PHRASE0@@aquatic
 @@DEFINE@@an aquatic animal or plant lives or grows in water
 @@EXAMPLE0@@These fish are particularly fond of vegetable foods, and will usually eat tender aquatic plants.
-@@EXAMPLE1@@The hippopotamus is semi-aquatic(=lives partly in water and partly on the land).
+@@EXAMPLE1@@The hippopotamus is semi-aquatic (=lives partly in water and partly on the land ).
 @@EXAMPLE2@@Unfortunately, fertilizers from surrounding farmland have reduced the aquatic life.
 @@PHRASE1@@amphibious
 @@DEFINE@@animals that are amphibious are able to live both in water and on land
@@ -126393,7 +126392,7 @@ to be willing to do something
 @@THESPROPFORM0@@be game to do something
 @@EXAMPLE0@@She's one of those people who's game to try anything.
 @@THESPROPFORM1@@be game for
-@@EXAMPLE0@@Tim's always game for a laugh.(=willing to do things that might be fun)
+@@EXAMPLE0@@Tim's always game for a laugh. (=willing to do things that might be fun )
 when you do something willingly
 @@PHRASE0@@willingly
 @@EXAMPLE0@@I'd willingly pay higher taxes if the money was spent on health and education.
@@ -128966,7 +128965,7 @@ someone who writes books, articles, stories etc
 @@EXAMPLE0@@When I was young, I wanted to be a writer.
 @@EXAMPLE1@@I enjoy reading American writers.
 @@EXAMPLE2@@a political writer for the New York Times
-@@EXAMPLE3@@He's a good speech writer(=someone who writes speeches for other people), and much in demand among politicians.
+@@EXAMPLE3@@He's a good speech writer (=someone who writes speeches for other people ), and much in demand among politicians.
 @@THESPROPFORM0@@writer of
 @@EXAMPLE0@@a writer of romantic novels
 @@PHRASE1@@author
@@ -129135,7 +129134,7 @@ something that has been written or printed
 @@DEFINE@@a piece of writing. A paper document is usually an official or legal one. A document that you produce on a computer is something you type into a particular file
 @@EXAMPLE0@@Several secret documents went missing from the government's Information department.
 @@EXAMPLE1@@Your birth certificate is an important document, which should be kept safe at all times.
-@@EXAMPLE2@@Open a new document(=on a computer)and name it "resume".
+@@EXAMPLE2@@Open a new document (=on a computer ) and name it "resume".
 @@EXAMPLE3@@You can attach any documents to an email and send them to friends or colleagues.
 written not spoken
 @@PHRASE0@@written
@@ -129160,7 +129159,7 @@ information/numbers/calculations etc
 @@PHRASE0@@wrong
 @@DEFINE@@not correct
 @@EXAMPLE0@@For every answer that is wrong, you lose five points.
-@@EXAMPLE1@@I think that clock must be wrong(=showing the wrong time).
+@@EXAMPLE1@@I think that clock must be wrong (=showing the wrong time ).
 @@THESPROPFORM0@@get something wrong
 @@EXAMPLE0@@You must have got my email address wrong.
 @@THESPROPFORM1@@wrong (telephone) number/address/name etc
